@@ -1,0 +1,37 @@
+Waymaker Services Sdn Bhd
+3346, Ground Floor, Jalan 18/32,
+Taman Sri Serdang,
+43300 Seri Kembangan,
+Selangor, Malaysia.
+*********************************
+
+
+sticky whatsapp
+
+Contact No
++60-18 221 6019
+*********************************
+
+
+<div class="whatsapp_float_btn num1">
+    <a href="https://wa.me/60182216019?text=Hi, i am interested to know more. (https://www.wmaker.com.my/contactus/)" id="" class="contactRecordBtn whatsapp" data-type="1" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <div class="whatsapp_float_title"></div>
+</div>
+
+*********************************
+
+waze
+google
+<a class="contactRecordBtn" data-type="4" href="https://www.waze.com/ul?ll=3.009424,101.714462&amp;navigate=yes&amp;zoom=17" target="_blank"> <img alt="waze" src="https://cdn1.npcdn.net/img/1548296535y_waze.png" style="height: 30px; width: 30px;"> </a>
+<a class="contactRecordBtn ml-2" data-type="3" href="https://www.google.com/maps?q=3.009424,101.714462" target="_blank"> <img alt="google_map" src="https://cdn1.npcdn.net/img/1548298407y_googlemap.png" style="height: 30px; width: 30px;"> </a>
+
+
+
+account@wmaker.com.my
+
+
+© 2023-2024 Waymaker Services Sdn Bhd 202001038666 (1394987-K)
+
+
