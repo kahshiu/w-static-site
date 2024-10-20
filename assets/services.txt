@@ -1,12 +1,44 @@
+----------------------
+prompt:
+A site for WM Services Pte Ltd, a company that provides:
+- account auditing service
+- Tax planning service
+- company secretary service
+- general management and strategic growth consultation 
+
+Company logo colours:
+blue: rgb(27, 64, 125)
+white: rgb(255, 255, 255)
+
+typeface:
+Noto Serif KR
+
+
+
+The style should be formal index copy.htmland classy. Do not use rounded corners for borders.
+There should be an about us section, a services section, a contact us, and a footer. 
+The about us section should contain a brief description of the company and its services. 
+The services section should contain information about the services provided by the company. 
+The contact section should contain the company's contact information. 
+The footer should contain the company's copyright information.
+
+
 -------------------------------------
 **Your Trusted Partner In Accounting Solutions**
-Waymaker Services Sdn Bhd is a leading provider of outsource accounting services based in Seri Kembangan, Selangor, Malaysia. Our company has been serving clients in the region for many years and has established a reputation for excellence in accounting services. 
+Waymaker Services Sdn Bhd is a leading provider of outsource accounting services based in Seri Kembangan, Selangor, Malaysia. 
+
+
+Our company served clients in the central region of West Malaysis for many years, thus established excellent reputation in accounting services. 
+
 We offer a wide range of accounting services, including bookkeeping, payroll management, financial reporting, and budgeting. The team of highly skilled and experienced professionals at Waymaker Services Sdn Bhd is committed to providing clients with the highest level of service and support, ensuring their financial records are accurate, up-to-date, and compliant with all relevant regulations.
 
 *********************
 Tailored Accounting Services for Businesses
 
-Waymaker Services Sdn Bhd is a leading provider of outsource accounting services based in Seri Kembangan, Selangor, Malaysia. Our company has been serving clients in the region for many years and has established a reputation for excellence in accounting services. 
+Waymaker Services Sdn Bhd is a leading provider of 
+
+We offer accounting service outsourcing. Our company has been serving clients in the region for many years and has established a reputation for excellence in accounting services. 
+
 We offer a wide range of accounting services, including bookkeeping, payroll management, financial reporting, and budgeting. The team of highly skilled and experienced professionals at Waymaker Services Sdn Bhd is committed to providing clients with the highest level of service and support, ensuring their financial records are accurate, up-to-date, and compliant with all relevant regulations.
 
 *discover more *
