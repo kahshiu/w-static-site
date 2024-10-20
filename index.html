@@ -5,6 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        /*
+        @font-face {
+            font-family: NotoSerif;
+            src: url(assets/fonts/NotoSerif.ttf);
+        }
+            */
+        @font-face {
+            font-family: Cormorant;
+            src: url(assets/fonts/Cormorant.ttf) format('truetype');
+            font-weight: 300 700;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: WorkSans;
+            src: url(assets/fonts/WorkSans.ttf) format('truetype');
+            font-weight: 100 900;
+            font-display: swap;
+        }
+        body {
+            color: darkgreen;
+            /*
+            font-family: Cormorant, "Times New Roman", serif;
+            font-variation-settings: "wght" 700;
+            */
+        }
+        
+        .test {
+            transition: all 0.5s
+        }
+        .test:hover {
+            font-variation-settings: "wght" 700;
+        }
+
+        .title {
+            font-family: WorkSans, Arial, sans-serif;
+            font-variation-settings: "wght" 650;
+        }
+
+
+        .test:hover {
+            font-variation-settings: "wght" 700;
+        }
+        #header-slim {
+            opacity: 0;
+        }
+
+        #header-slim.show {
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+        }
+
+        /*
+        .shadow {
+            border: 1px solid #333;
+            box-shadow: 10px 5px 0 -2px #888;
+        }
+        */
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -16,41 +80,9 @@
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-        }
-        #header-slim {
-            opacity: 0;
-        }
-
-        #header-slim.show {
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .shadow {
-            border: 1px solid #333;
-            box-shadow: 10px 5px 0 -2px #888;
-        }
-    </style>
-    <!---
-    <style>
-        @font-face {
-            font-family: NotoSerif;
-            src: url(assets/noto-serif/NotoSerif-VariableFont_wdth,wght.ttf);
-        }
-        body {
-    font-family: NotoSerif;
-    color: darkgreen;
-} 
-    -->
-    </style>
 </head>
 
-<body class="font-sans">
+<body class="font-serif">
     <header id="header-fat" class="z-50 flex px-16 py-8 bg-stone-900 text-stone-200">
         <div class="basis-2/3 text-2xl">
             <img src="assets/logo.png" style="width: 20%">
@@ -86,7 +118,7 @@
         </div>
     </div>
     <section class="px-16 py-8 bg-sky-50">
-        <h2 class="mb-6 text-3xl text-center uppercase font-bold">Services</h2>
+        <h2 class="mb-6 text-3xl text-center uppercase font-bold test">Services</h2>
         <div class="mb-6 flex flex-row">
             <article
                 class="basis-1/4 mx-6 p-4 translate-y-0 border-2 border-solid border-stone-300 rounded-md shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
@@ -157,7 +189,7 @@
                 <img src="u.jpg">
             </div>
             <div class="basis-1/2 mx-6 p-4">
-                <h3 class=" mb-6 text-4xl font-bold leading-normal"> Why Choose Waymaker Services for Your Financial
+                <h3 class=" mb-6 text-4xl leading-normal title"> Why Choose Waymaker Services for Your Financial
                     Needs </h3>
                 <p class="text-justify">
                     Ut nec ligula sit amet est ultrices malesuada eget quis libero. Pellentesque pharetra lacus sit amet
