@@ -22,6 +22,15 @@
                 content-visibility: auto;
             }
         }
+        #header-slim {
+            opacity: 0;
+        }
+
+        #header-slim.show {
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
+        }
+
         .shadow {
             border: 1px solid #333;
             box-shadow: 10px 5px 0 -2px #888;
@@ -42,7 +51,7 @@
 </head>
 
 <body class="font-sans">
-    <header class="z-50 flex px-16 py-8 bg-stone-900 text-stone-200">
+    <header id="header-fat" class="z-50 flex px-16 py-8 bg-stone-900 text-stone-200">
         <div class="basis-2/3 text-2xl">
             <img src="assets/logo.png" style="width: 20%">
             Waymaker Services Sdn Bhd
@@ -55,6 +64,20 @@
             </ul>
         </nav>
     </header>
+
+    <header id="header-slim" class="fixed top-0 z-50 flex w-full px-16 py-2 bg-stone-900 text-stone-200">
+        <div class="basis-2/3 text-2xl">
+            Waymaker Services Sdn Bhd
+        </div>
+        <nav class="basis-1/3">
+            <ul class="flex justify-end">
+                <li class="px-6">Company</li>
+                <li class="px-6">Services</li>
+                <li class="px-6">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="flex h-screen px-16 py-8 bg-white">
         <div class="m-auto">
             <h3 class="text-center mb-6 text-6xl font-bold"> Empowering Your Accounting Needs</h3>
@@ -207,6 +230,20 @@
         <hr class="h-0.5 mb-2 border-t-0 bg-neutral-100" />
         -->
     </footer>
+    <script>
+        const ref = document.getElementById("header-fat")
+        const target = document.getElementById("header-slim")
+
+        const showSlim = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            const isShow = !entry.isIntersecting
+
+            if (isShow) target.classList.add("show")
+            else target.classList.remove("show")
+        }, { threshold: 0 })
+
+        showSlim.observe(ref)
+    </script>
 </body>
 
 </html>
