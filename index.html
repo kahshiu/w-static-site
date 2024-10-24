@@ -1,278 +1,416 @@
 <!doctype html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        /*
-        @font-face {
-            font-family: NotoSerif;
-            src: url(assets/fonts/NotoSerif.ttf);
-        }
-        @font-face {
-            font-family: Cormorant;
-            src: url(assets/fonts/Cormorant.ttf) format('truetype');
-            font-weight: 300 700;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: WorkSans;
-            src: url(assets/fonts/WorkSans.ttf) format('truetype');
-            font-weight: 100 900;
-            font-display: swap;
-        }
-            */
-        body {
-            color: darkgreen;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style type="text/tailwindcss">
             /*
-            font-family: Cormorant, "Times New Roman", serif;
-            font-variation-settings: "wght" 700;
-            */
-        }
-        
-        .test {
-            transition: all 0.5s
-        }
-        .test:hover {
-            /*font-variation-settings: "wght" 700;*/
-        }
-
-
-        /*
-        .title {
-            font-family: WorkSans, Arial, sans-serif;
-            font-variation-settings: "wght" 650;
-        }
-            */
-        #header-slim {
-            opacity: 0;
-        }
-        #header-slim.show {
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
+            @font-face {
+                font-family: NotoSerif;
+                src: url(assets/fonts/NotoSerif.ttf);
             }
-        }
+            @font-face {
+                font-family: Cormorant;
+                src: url(assets/fonts/Cormorant.ttf) format('truetype');
+                font-weight: 300 700;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: WorkSans;
+                src: url(assets/fonts/WorkSans.ttf) format('truetype');
+                font-weight: 100 900;
+                font-display: swap;
+            }
+            */
 
-        /*
-        .shadow {
-            border: 1px solid #333;
-            box-shadow: 10px 5px 0 -2px #888;
-        }
-        */
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
+            :root {
+                --my-blue: #4a90e2;
+                --my-blue-bg: #1b407d;
+                --my-blue-bg-darker: #0a2f63;
+
+                --my-gray: #f5f5f5;
+                --my-gray-darker: #a0a0a0;
+                --my-green: #009688;
+                --my-orange: #ff5722;
+            }
+            .bg-header {
+                /*
+                    background-image: url("assets/subtle-prism.svg");
+                    background-image: url("assets/spectrum-gradient1.svg");
+                    background-image: url("assets/spectrum-gradient2.svg");
+                */
+                background-image: url("assets/subtle-prism.svg");
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            #header-slim,
+            #footer-fat {
+                opacity: 0;
+                background-color: white;
+                transition: all 0.3s;
+            }
+            #header-slim.show,
+            #footer-fat.show {
+                opacity: 1;
+                background-color: var(--my-blue);
+            }
+            .a-animated {
+                white-space: nowrap;
+                transition: all 0.3s ease-in;
+            }
+            .a-animated:hover {
+                text-shadow: 4px 4px 8px var(--my-blue-bg-darker);
+            }
+
+            .title {
+                font-size: 3rem;
+                font-weight: bold;
+                letter-spacing: 0.2em;
+            }
+
+            .slide1 {
+                background-image: url("assets/img/banner-collab-hands.webp");
+                background-attachment: fixed;
+                background-size: cover;
+            }
+
+            #service1 { opacity: 0; transition: all 0.5s ease-in 0.5s; }
+            #service2 { opacity: 0; transition: all 0.5s ease-in 1.0s; }
+            #service3 { opacity: 0; transition: all 0.5s ease-in 1.5s; }
+            #service4 { opacity: 0; transition: all 0.5s ease-in 2.0s; }
+            #service5 { opacity: 0; transition: all 0.5s ease-in 2.5s; }
+            #service6 { opacity: 0; transition: all 0.5s ease-in 3.0s; }
+
+            #service1.show { opacity: 1; }
+            /*
+            #service2.show { opacity: 1; }
+            #service3.show { opacity: 1; }
+            #service4.show { opacity: 1; }
+            #service5.show { opacity: 1; }
+            #service6.show { opacity: 1; }
+            */
+
+            @layer utilities {
+            }
+
+            .scroll-logo {
+                transform: scale(2, 2);
+                filter: brightness(0) invert(1);
+            }
+
+            /*
+            @keyframes scroll-logo {
+                to {
+                    scale: 8 8;
+                    filter: brightness(0) invert(1) opacity(0) blur(8px);
                 }
             }
-        }
-    </script>
-</head>
+            */
+        </style>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {},
+                    },
+                },
+            };
+        </script>
+    </head>
 
-<body class="font-sans">
-    <header id="header-fat" class="z-50 flex px-16 py-8 bg-stone-900 text-stone-200">
-        <div class="basis-2/3 text-2xl">
-            <img src="assets/logo.png" style="width: 20%">
-            Waymaker Services Sdn Bhd
-        </div>
-        <nav class="basis-1/3">
-            <ul class="flex justify-end">
-                <li class="px-6">Company</li>
-                <li class="px-6">Services</li>
-                <li class="px-6">Contact Us</li>
-            </ul>
-        </nav>
-    </header>
-
-    <header id="header-slim" class="fixed top-0 z-50 flex w-full px-16 py-2 bg-stone-900 text-stone-200">
-        <div class="basis-2/3 text-2xl">
-            Waymaker Services Sdn Bhd
-        </div>
-        <nav class="basis-1/3">
-            <ul class="flex justify-end">
-                <li class="px-6">Company</li>
-                <li class="px-6">Services</li>
-                <li class="px-6">Contact Us</li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="flex h-screen px-16 py-8 bg-white">
-        <div class="m-auto">
-            <h3 class="text-center mb-6 text-6xl font-bold"> Empowering Your Accounting Needs</h3>
-            <p class="text-center text-2xl"> We offer great services </p>
-            <button></button>
-        </div>
-    </div>
-    <section class="px-16 py-8 bg-sky-50">
-        <h2 class="mb-6 text-3xl text-center uppercase font-bold test">Services</h2>
-        <div class="mb-6 flex flex-row">
-            <article
-                class="basis-1/4 mx-6 p-4 translate-y-0 border-2 border-solid border-stone-300 rounded-md shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
-                <div class="h-80">
-                    <img src="u.jpg">
-                </div>
-                <h3 class="mb-4 text-xl uppercase font-bold">Accounting Outsource</h3>
-                <p class="text-justify">
-                    Phasellus id metus vehicula, sollicitudin elit sit amet, convallis tellus. Phasellus turpis massa,
-                    dignissim sit amet velit quis, cursus aliquam elit. Duis aliquet maximus molestie. Sed aliquet leo
-                    est, eu volutpat erat condimentum vel. Integer sodales a nulla et viverra. Aliquam cursus vel lorem
-                    commodo dignissim. Nullam mattis nisl ac enim aliquet euismod eu pharetra risus.
-                </p>
-            </article>
-            <article
-                class="basis-1/4 mx-6 p-4 translate-y-0 border-2 border-solid border-stone-300 rounded-md shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
-                <div class="h-80">
-                    <img src="u.jpg">
-                </div>
-                <h3 class="mb-4 text-xl uppercase font-bold">Comprehensive Account Auditing</h3>
-                <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor, erat eu luctus facilisis,
-                    lectus sem cursus est, at volutpat magna lectus non nulla. Aliquam purus risus, aliquam at ultrices
-                    ac, auctor id ante. Nullam justo velit, elementum vel lacus at, tincidunt bibendum urna. Vestibulum
-                    feugiat mi nisi, a tempor ante bibendum vitae. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Ut et quam ultrices, viverra sem ut, gravida sem. Nulla pretium lacus non rutrum accumsan.
-                    Praesent vitae risus auctor, consectetur neque sit amet, porttitor tortor. Donec ultrices elit nibh,
-                    vitae commodo libero laoreet sit amet.
-                </p>
-            </article>
-            <article
-                class="basis-1/4 mx-6 p-4 translate-y-0 border-2 border-solid border-stone-300 rounded-md shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
-                <div class="h-80">
-                    <img src="u.jpg">
-                </div>
-                <h3 class="mb-4 text-xl uppercase font-bold">Service 3</h3>
-                <p class="text-justify">
-                    Sed eros metus, sagittis at imperdiet sed, porta ac diam. Fusce vestibulum magna in sapien egestas,
-                    et imperdiet lacus facilisis. Donec ornare pulvinar lectus, in pellentesque dolor tempus ut. Aliquam
-                    placerat congue nunc, non pellentesque purus porttitor at. Etiam vel sem est. Pellentesque hendrerit
-                    tempus placerat. Integer non lacus ligula. Nulla massa nunc, venenatis faucibus dolor aliquet,
-                    interdum congue lectus. Morbi placerat commodo massa, at maximus justo viverra suscipit. Curabitur
-                    hendrerit gravida arcu, non pulvinar dolor gravida a. Ut lobortis egestas lacus, et fringilla arcu
-                    ultricies at.
-                </p>
-            </article>
-            <article
-                class="basis-1/4 mx-6 p-4 translate-y-0 border-2 border-solid border-stone-300 rounded-md shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
-                <div class="h-80">
-                    <img src="u.jpg">
-                </div>
-                <h3 class="mb-4 text-xl uppercase font-bold">Service 4</h3>
-                <p class="text-justify">
-                    Ut nec ligula sit amet est ultrices malesuada eget quis libero. Pellentesque pharetra lacus sit amet
-                    ante eleifend, vitae volutpat lectus sodales. Nunc tristique rutrum nulla, non vulputate libero
-                    mollis sed. Vivamus condimentum dui sed pulvinar eleifend. Nullam nec mattis dui. Nulla aliquam
-                    vehicula sapien eget convallis. Ut vel nulla tellus. Aenean viverra, nibh ac elementum elementum,
-                    libero orci malesuada lorem, eu dictum libero sem ornare justo. Sed accumsan sem nec risus varius
-                    pharetra.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <section class="mb-52 px-16 py-8 bg-white">
-        <article class="flex flex-row">
-            <div class="basis-1/2 min-h-88">
-                <img src="u.jpg">
-            </div>
-            <div class="basis-1/2 mx-6 p-4">
-                <h3 class=" mb-6 text-4xl font-bold leading-normal"> Why Choose Waymaker Services for Your Financial
-                    Needs </h3>
-                <p class="text-justify">
-                    Ut nec ligula sit amet est ultrices malesuada eget quis libero. Pellentesque pharetra lacus sit amet
-                    ante
-                    eleifend, vitae volutpat lectus sodales. Nunc tristique rutrum nulla, non vulputate libero mollis
-                    sed.
-                    Vivamus
-                    condimentum dui sed pulvinar eleifend. Nullam nec mattis dui. Nulla aliquam vehicula sapien eget
-                    convallis.
-                    Ut
-                    vel nulla tellus. Aenean viverra, nibh ac elementum elementum, libero orci malesuada lorem, eu
-                    dictum
-                    libero
-                    sem
-                    ornare justo. Sed accumsan sem nec risus varius pharetra.
-                </p>
-            </div>
-        </article>
-    </section>
-
-    <!---
-    <footer class="px-16 py-8 bg-stone-900 text-slate-200"></footer>
-    -->
-    <footer class="fixed bottom-0 -z-10 w-full px-16 py-8 bg-stone-900 text-stone-200">
-        <div class="flex">
-            <div class="basis-1/2">
-                <p class="text-slate-400">
-                    Terms &amp; Conditions
-                </p>
-                <p class="text-slate-400 text-sm">
-                    &#169; Waymaker Sdn Bhd, 2024. All rights reserved.
-                </p>
-            </div>
-
-            <div class="basis-1/2">
-                <nav class="flex mb-2 text-right">
-                    <div class="basis-1/3 order-last">
-                        <p class="text-slate-50">About</p>
-                        <ul class="text-slate-400">
-                            <li class="">Company</li>
-                            <li class="">Services</li>
-                        </ul>
-                    </div>
-
-                    <div class="basis-1/3">
-                        <p>Contacts</p>
-                        <ul class="text-slate-400">
-                            <li class="">Whatsapp</li>
-                            <li class="">Phone</li>
-                            <li class="">Email</li>
-                        </ul>
-                    </div>
-
-                    <div class="basis-1/3">
-                        <p>Locations</p>
-                        <ul class="text-slate-400">
-                            <li class="">Google Map</li>
-                            <li class="">Waze</li>
-                        </ul>
-                    </div>
+    <body class="font-sans">
+        <header
+            id="header-fat"
+            class="bg-header text-slate-200"
+            style="z-index: 50"
+        >
+            <div class="h-screen">
+                <nav class="float-right lg:w-1/3 md:w-2/3 sm:w-full">
+                    <ul class="grid grid-cols-3 text-xl">
+                        <li>
+                            <a
+                                class="inline-block w-full h-full px-8 py-4 text-right a-animated"
+                                href="company.html"
+                                >Company
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="inline-block w-full h-full px-8 py-4 text-right a-animated"
+                                href="services.html"
+                                >Services</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="inline-block w-full h-full px-8 py-4 text-right a-animated"
+                                href="contacts.html"
+                                >Contact Us</a
+                            >
+                        </li>
+                    </ul>
                 </nav>
-                <!--
-                <img width=100 src="assets/icons/whatsapp-inverted.svg" alt="whatsapp contact icon" />
-                <img src="assets/icons/whatsapp.svg" alt="whatsapp contact icon" />
-                -->
+                <section class="float-right w-full text-center">
+                    <img
+                        src="assets/logo.png"
+                        class="mx-auto my-36 scroll-logo"
+                    />
+                    <a href="index.html" class="title">
+                        WAYMAKER SERVICES SDN BHD
+                    </a>
+                </section>
+            </div>
+        </header>
+
+        <header id="header-slim" class="fixed top-0 z-10 w-full text-stone-200">
+            <div class="float-left text-2xl">
+                <a class="inline-block w-full h-full px-8 py-4 text-right a-animated" href="index.html"> Waymaker Services Sdn Bhd </a>
+            </div>
+            <nav class="float-right lg:w-1/3 md:w-2/3 sm:w-full">
+                <ul class="grid grid-cols-3 text-xl">
+                    <li> <a class="inline-block w-full h-full px-8 py-4 text-right a-animated" href="company.html">Company</a></li>
+                    <li> <a class="inline-block w-full h-full px-8 py-4 text-right a-animated" href="services.html">Services</a> </li>
+                    <li> <a class="inline-block w-full h-full px-8 py-4 text-right a-animated" href="contacts.html">Contact Us</a> </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="bg-white">
+            serviced clients over states
+            <div class="grid grid-cols-4 gap-4">
+                <div class="grid grid-cols-subgrid col-span-2 gap-4">
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                    <article
+                        class="bg-slate-200 border-2 border-solid border-black"
+                    >
+                        section
+                    </article>
+                </div>
+                <img
+                    src="something.jpg"
+                    class="border-0 border-solid border-black"
+                />
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <article>
+                <ul>
+                    <li class="service" id="service1">Outsourced Accounting Services</li>
+                    <li class="service" id="service2">Payroll Management</li>
+                    <li class="service" id="service3">Tax Consultation &amp; Planning</li>
+                    <li class="service" id="service4">Company Secretarial Services</li>
+                    <li class="service" id="service5">Business Strategic Growth Consultation</li>
+                    <li class="service" id="service6">Insurance Planning &amp; Policy Engagement</li>
+                </ul>
+
+
+            </articl>
+            chips our core services
+        </section>
+
+        <div class="flex h-screen bg-white text-stone-200 text-center slide1">
+            <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px)">
+                <h3 class="text-center mb-6 text-6xl title">
+                    Empowering Your Accounting Needs
+                </h3>
+                <p class="text-center text-2xl">We offer great services</p>
+                <input
+                    type="button"
+                    value="CONTACT NOW !"
+                    class="m-4 p-4 border-2 border-solid border-stone-200 rounded-lg text-xl text-stone-200 font-bold"
+                    style="background-color: var(--my-orange)"
+                />
             </div>
         </div>
 
-        <!--
-        <hr class="h-0.5 mb-2 border-t-0 bg-neutral-100" />
-        -->
-    </footer>
-    <script>
-        const ref = document.getElementById("header-fat")
-        const target = document.getElementById("header-slim")
+        <section class="px-16 py-8 bg-white">
+            <article class="flex flex-row">
+                <div class="basis-1/2 min-h-88">
+                    <img src="u.jpg" />
+                </div>
+                <div class="basis-1/2 mx-6 p-4">
+                    <h3 class="mb-6 text-4xl font-bold leading-normal">
+                        Why Choose Waymaker Services for Your Financial Needs
+                    </h3>
+                    <p class="text-justify">
+                        Ut nec ligula sit amet est ultrices malesuada eget quis
+                        libero. Pellentesque pharetra lacus sit amet ante
+                        eleifend, vitae volutpat lectus sodales. Nunc tristique
+                        rutrum nulla, non vulputate libero mollis sed. Vivamus
+                        condimentum dui sed pulvinar eleifend. Nullam nec mattis
+                        dui. Nulla aliquam vehicula sapien eget convallis. Ut
+                        vel nulla tellus. Aenean viverra, nibh ac elementum
+                        elementum, libero orci malesuada lorem, eu dictum libero
+                        sem ornare justo. Sed accumsan sem nec risus varius
+                        pharetra.
+                    </p>
+                </div>
+            </article>
+        </section>
 
-        const showSlim = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            const isShow = !entry.isIntersecting
+        <section class="mb-52 bg-white">testimony from happy customers</section>
 
-            if (isShow) target.classList.add("show")
-            else target.classList.remove("show")
-        }, { threshold: 0 })
+        <footer
+            id="footer-fat"
+            class="fixed bottom-0 -z-10 w-full px-16 py-8 bg-dark-blue text-stone-200"
+        >
+            <div class="flex">
+                <div class="basis-1/2">
+                    <p class="text-slate-50">
+                        <a href="conditions.html">Terms &amp; Conditions</a>
+                    </p>
+                    <p class="text-slate-400 text-sm">
+                        All rights reserved. &#169; 2023-2024, Waymaker Sdn Bhd
+                        (Reg. 202001038666, 1394987-K)
+                    </p>
+                </div>
 
-        showSlim.observe(ref)
-    </script>
-</body>
+                <div class="basis-1/2">
+                    <nav class="flex mb-2 px-6 text-right">
+                        <div class="basis-1/3 order-last">
+                            <ul class="text-slate-200">
+                                <li class="">
+                                    <a href="company.html">Company</a>
+                                </li>
+                                <li class="">
+                                    <a href="services.html">Services</a>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div class="basis-1/3">
+                            <ul class="text-slate-200">
+                                <li class="">
+                                    <a
+                                        href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE."
+                                        >Whatsapp
+                                        <img
+                                            class="inline"
+                                            src="assets/icons/whatsapp.svg"
+                                    /></a>
+                                </li>
+                                <li class="">
+                                    <a href="tel:+60182216019"
+                                        >Phone
+                                        <img
+                                            class="inline"
+                                            src="assets/icons/phone.svg"
+                                    /></a>
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20..."
+                                        >Email
+                                        <img
+                                            class="inline"
+                                            src="assets/icons/email.svg"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="basis-1/3">
+                            <ul class="text-slate-200">
+                                <li class="">
+                                    <a
+                                        href="https://www.google.com/maps?q=3.009424,101.714462"
+                                        target="_blank"
+                                        >Google Map
+                                        <img
+                                            class="inline"
+                                            src="assets/icons/googleMap.svg"
+                                    /></a>
+                                </li>
+                                <li class="">
+                                    <a
+                                        href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17"
+                                        target="_blank"
+                                        >Waze
+                                        <img
+                                            class="inline"
+                                            src="assets/icons/waze.svg"
+                                    /></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            const toggleClass = (el, condition, className) => {
+                if(condition) {
+                    el.classList.add(className);
+                } else {
+                    el.classList.remove(className);
+                }
+            }
+
+            const headerFat = document.getElementById("header-fat");
+            const headerSlim = document.getElementById("header-slim");
+            const footerFat = document.getElementById("footer-fat");
+            const service1 = document.getElementById("service1");
+            const service2 = document.getElementById("service2");
+            const service3 = document.getElementById("service3");
+            const service4 = document.getElementById("service4");
+            const service5 = document.getElementById("service5");
+            const service6 = document.getElementById("service6");
+
+            // NOTE: navigation toggler
+            new IntersectionObserver(
+                (entries) => {
+                    const entry = entries[0];
+                    const isShow = !entry.isIntersecting;
+
+                    toggleClass(headerSlim, isShow, "show");
+                    toggleClass(footerFat, isShow, "show");
+                },
+                { threshold: 0 },
+            ).observe(headerFat);
+
+            const showService = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e)=>{
+                        const entry = e;
+                        const isShow = entry.isIntersecting;
+                        toggleClass(entry.target, isShow, "show");
+                    })
+                },
+                { threshold: 1 },
+            )
+            showService.observe(service1);
+            showService.observe(service2);
+            showService.observe(service3);
+            showService.observe(service4);
+            showService.observe(service5);
+            showService.observe(service6);
+        </script>
+    </body>
 </html>
