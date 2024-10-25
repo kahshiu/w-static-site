@@ -7,6 +7,11 @@ createwebsite.io
 https://tabler.io/icons
 account@wmaker.com.my
 
+fa-whatsapp
+has whatsapp icon
+https://fontawesome.com/
+
+
 #94A0B2
 #94A0B2
 
