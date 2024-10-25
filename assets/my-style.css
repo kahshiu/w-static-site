@@ -1,0 +1,200 @@
+@import url(switzer.css);
+
+:root {
+    --my-blue: #4a90e2;
+    --my-blue-bg: #1b407d;
+    --my-blue-bg-darker: #0a2f63;
+
+    --my-gray: #f5f5f5;
+    --my-gray-darker: #a0a0a0;
+    --my-green: #009688;
+    --my-orange: #ff5722;
+}
+
+.bg-header {
+    /*
+        background-image: url("subtle-prism.svg");
+        background-image: url("spectrum-gradient1.svg");
+        background-image: url("spectrum-gradient2.svg");
+    */
+    background-image: url("subtle-prism.svg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header-slim,
+#footer-fat {
+    opacity: 0;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+#header-slim.show,
+#footer-fat.show {
+    opacity: 1;
+    background-color: var(--my-blue);
+}
+
+/* SECTION: top right */
+.nav-logo {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.nav-top {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.nav-item-top {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 32px;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.animated {
+    white-space: nowrap;
+    transition: all 0.5s ease-in;
+}
+
+.animated:hover {
+    text-shadow: 4px 4px 8px var(--my-blue-bg-darker);
+}
+
+/*
+REUSABLE
+*/
+.nav-stripe {
+    display: flex;
+    align-items: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.w-80 {
+    width: 90%;
+}
+
+.px-base {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.switzer-black {
+    font-family: 'Switzer-Black', Arial, sans-serif;
+}
+
+.switzer-thin {
+    font-family: 'Switzer-Regular', Arial, sans-serif;
+}
+
+.switzer-xthin {
+    font-family: 'Switzer-ExtralightItalic', Arial, sans-serif;
+}
+
+.clickable {
+    transition: all 0.3s;
+}
+
+.clickable:hover {
+    transform: scale(2, 2);
+}
+
+
+/*
+SPECIFIC
+*/
+.nav-top {
+    background-color: var(--my-blue-bg);
+    color: var(--my-gray);
+}
+
+.nav-top-logo {
+    background-image: url('logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.1) invert(1);
+}
+
+.location-logo {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+}
+
+#nav-bottom-left {
+    font-family: 'Switzer-ExtraLight', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#nav-bottom-left a {
+    display: inline-block;
+    margin-bottom: 1.3rem;
+    font-size: 18px;
+}
+
+#nav-bottom-right {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Switzer-ExtraLight', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#nav-bottom-right ul li {
+    margin-bottom: 0.3rem;
+    color: white;
+}
+
+#nav-bottom-right ul li img {
+    margin-left: 0.3rem;
+}
+
+.qr-code {
+    background-image: url('icons-old/qrcode.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.whatsapp-platinum {
+    background-image: url('icons-old/whatsapp-platinum.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.googlemap-logo {
+    background-image: url('icons-old/googlemap.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.waze-logo {
+    background-image: url('icons-old/waze.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.office-pic {
+    background-image: url('waymaker-office-md.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
