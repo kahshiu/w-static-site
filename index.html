@@ -13,6 +13,7 @@
             background-size: cover;
         }
 
+        /*
         #service1 {
             opacity: 1;
             transition: all 0.5s ease-in 0.5s;
@@ -42,6 +43,7 @@
             opacity: 1;
             transition: all 0.5s ease-in 3.0s;
         }
+            */
 
         /*
             #service1.show { opacity: 1; }
@@ -81,33 +83,26 @@
             </ul>
         </div>
 
-        <section class="w-full" style="display:flex; flex-direction:column; justify-content:space-evenly; align-items:center; height:100%; padding-top:4rem">
-            <div id="splash-logo" class="bg-img"></div>
+        <section class="w-full" style="display:flex; flex-direction:column; align-items:center; height:100%; ">
+            <img id="splash-logo" src="assets/logo.png" style="margin-bottom:2rem"/>
             <a href="index.html" id="splash-title" class="text-center">WAYMAKER SERVICES <br /> SDN BHD</a>
         </section>
     </header>
 
     <section class="h-screen px-base bg-stone-200 text-stone-500">
-        <article class="" style="padding-top:10rem">
-            <h1 class="switzer-xthin text-center" style="font-size:4rem">Our Service</h1>
+        <article style="padding-top:4rem">
+            <h1 class="switzer-xthin text-center" style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
 
-            <ul class="grid grid-cols-2 gap-4 text-center text-xl font-bold">
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service1">
-                    Outsourced Accounting Service</li>
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service2">
-                    Outsourced Payroll Service</li>
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service3">
-                    Tax Consultation &amp; Planning</li>
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service4">
-                    Company Secretarial Service</li>
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service5">
-                    Business Strategic Growth Consultation</li>
-                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service6">
-                    Insurance Planning &amp; Policy Engagement</li>
+            <ul class="flex text-xl font-bold" style="justify-content:center; flex-wrap:wrap; width:75%; margin-left:auto; margin-right:auto">
+                <li class="service-chip" id="service1"> Outsourced Accounting Service </li>
+                <li class="service-chip" id="service2"> Tax Consultation &amp; Planning </li>
+                <li class="service-chip" id="service3"> Company Secretarial Service </li>
+                <li class="service-chip" id="service4"> Outsourced Payroll Service </li>
+                <li class="service-chip" id="service5"> Business Strategic Growth Consultation </li>
+                <li class="service-chip" id="service6"> Insurance Planning &amp; Policy Engagement </li>
             </ul>
         </article>
     </section>
-
 
     <div class="flex h-screen bg-white text-stone-200 text-center bg-slide1">
         <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
@@ -121,15 +116,17 @@
         </div>
     </div>
 
-    <section class="h-screen px-16 py-8 bg-white">
-        <article class="flex flex-row">
-            <div class="basis-1/2 min-h-88">
+    <section class="px-base mb-56 bg-white" style="height:calc(100vh - 12rem)">
+        <article class="flex flex-row" style="padding-top:4rem">
+            <div class="basis-1/2" style="margin-top:4.5rem;"">
                 <img src="u.jpg" />
             </div>
-            <div class="basis-1/2 mx-6 p-4">
-                <h3 class="mb-6 text-4xl font-bold leading-normal">
+            <div class="basis-1/2" style="margin-top:4.5rem; margin-bottom:4.5rem">
+
+                <h3 class="switzer-xthin" style="font-size:2.5rem; margin-bottom:2.5rem">
                     Why Choose Waymaker Services for Your Financial Needs
                 </h3>
+
                 <p class="text-justify">
                     Ut nec ligula sit amet est ultrices malesuada eget quis
                     libero. Pellentesque pharetra lacus sit amet ante
@@ -146,7 +143,9 @@
         </article>
     </section>
 
+    <!---
     <section class="mb-52 bg-white">testimony from happy customers</section>
+    -->
 
     <footer class="fixed bottom-0 -z-10 w-full px-base" style="background-color:var(--my-blue-bg-darker)">
         <div class="nav-stripe" style="justify-content:space-between;">
