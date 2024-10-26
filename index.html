@@ -1,28 +1,49 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="assets/my-style.css" />
-        <style>
-            .bg-slide1 {
-                background-image: url("assets/img/banner-collab-hands.webp");
-                background-attachment: fixed;
-                background-size: cover;
-            }
 
-            .service {
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/my-style.css" />
+    <style>
+        .bg-slide1 {
+            background-image: url("assets/img-stock/banner-collab-hands.webp");
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-            #service1 { opacity: 1; transition: all 0.5s ease-in 0.5s; }
-            #service2 { opacity: 1; transition: all 0.5s ease-in 1.0s; }
-            #service3 { opacity: 1; transition: all 0.5s ease-in 1.5s; }
-            #service4 { opacity: 1; transition: all 0.5s ease-in 2.0s; }
-            #service5 { opacity: 1; transition: all 0.5s ease-in 2.5s; }
-            #service6 { opacity: 1; transition: all 0.5s ease-in 3.0s; }
+        #service1 {
+            opacity: 1;
+            transition: all 0.5s ease-in 0.5s;
+        }
 
-            /*
+        #service2 {
+            opacity: 1;
+            transition: all 0.5s ease-in 1.0s;
+        }
+
+        #service3 {
+            opacity: 1;
+            transition: all 0.5s ease-in 1.5s;
+        }
+
+        #service4 {
+            opacity: 1;
+            transition: all 0.5s ease-in 2.0s;
+        }
+
+        #service5 {
+            opacity: 1;
+            transition: all 0.5s ease-in 2.5s;
+        }
+
+        #service6 {
+            opacity: 1;
+            transition: all 0.5s ease-in 3.0s;
+        }
+
+        /*
             #service1.show { opacity: 1; }
             #service2.show { opacity: 1; }
             #service3.show { opacity: 1; }
@@ -30,240 +51,226 @@
             #service5.show { opacity: 1; }
             #service6.show { opacity: 1; }
             */
-
-            .scroll-logo {
-                transform: scale(2, 2);
-                filter: brightness(0) invert(1);
-            }
-        </style>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {},
-                    },
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {},
                 },
-            };
-        </script>
-    </head>
+            },
+        };
+    </script>
+</head>
 
-    <body class="font-sans">
-        <header
-            id="header-fat"
-            class="bg-header text-slate-200"
-            style="z-index:50; color:rgb(231,229,228)"
-        >
-            <div style="height:100vh;">
-                <nav style="float:right; width:33.33%; font-size:20px; text-align:right;">
-                    <ul class="nav-top">
-                        <li><a class="nav-item-top animated" href="company.html">Company</a></li>
-                        <li><a class="nav-item-top animated" href="services.html">Services</a></li>
-                        <li><a class="nav-item-top animated" href="contacts.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div style="clear:both"></div>
-                <section style="float:left; width:100%">
-                    <img
-                        src="assets/logo.png"
-                        class="scroll-logo"
-                        style="margin:10% auto;"
-                    />
-                    <a href="index.html" class="title">
-                        WAYMAKER SERVICES SDN BHD
-                    </a>
-                </section>
+<body class="font-sans">
+    <header id="header-fat" class="text-slate-200 ">
+        <div id="header-slim" class="nav-stripe w-full px-base"
+            style="align-items:baseline; justify-content:space-between; padding-top:0.9rem; padding-bottom:0.9rem">
+
+            <div id="header-logo" class="nav-stripe" style="column-gap:1rem;">
+                <div class="nav-top-logo" style="width:2rem; height:2rem;"></div>
+                <a class="switzer-black hvr-bounce-to-right"
+                    style="font-size:30px; font-weight:bold; letter-spacing:0.3rem;" href="index.html">WAYMAKER</a>
             </div>
-        </header>
 
-        <header id="header-slim" class="fixed top-0 z-10 w-full text-stone-200" style="height:4rem">
-            <div style="float:left; width:33.33%; font-size:20px; text-align:left;">
-                <a class="nav-item-top" style="font-weight: bold" href="index.html">Waymaker Services</a>
-            </div>
-            <nav style="float:right; width:33.33%; font-size:20px; text-align:right;">
-                <ul class="nav-top">
-                    <li><a class="nav-item-top animated" href="company.html">Company</a></li>
-                    <li><a class="nav-item-top animated" href="services.html">Services</a></li>
-                    <li><a class="nav-item-top animated" href="contacts.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="h-screen bg-white">
-            <article class="my-28 px-4 text-stone-600">
-                <div class="title mb-8">Our Services</div>
-                <ul class="grid grid-cols-2 gap-4 text-center text-xl font-bold">
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service1">Outsourced Accounting Services</li>
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service2">Payroll Management</li>
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service3">Tax Consultation &amp; Planning</li>
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service4">Company Secretarial Services</li>
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service5">Business Strategic Growth Consultation</li>
-                    <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service6">Insurance Planning &amp; Policy Engagement</li>
-                </ul>
-            </articl>
-        </section>
-
-        <div class="flex h-screen bg-white text-stone-200 text-center bg-slide1">
-            <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
-                <h3 class="text-center mb-6 text-6xl title">
-                    Empowering Your Accounting Needs
-                </h3>
-                <p class="text-center text-2xl">We offer great services</p>
-                <input
-                    type="button"
-                    value="CONTACT NOW !"
-                    class="m-4 p-4 border-2 border-solid border-stone-200 rounded-lg text-xl text-stone-200 font-bold"
-                    style="background-color: var(--my-orange)"
-                />
-            </div>
+            <ul class="nav-stripe switzer-regular" style="column-gap:3rem; font-size:20px">
+                <li><a class="animate-line" href="company.html">Company</a></li>
+                <li><a class="animate-line" href="services.html">Services</a></li>
+                <li><a class="animate-line" href="contacts.html">Contact Us</a></li>
+            </ul>
         </div>
 
-        <section class="h-screen px-16 py-8 bg-white">
-            <article class="flex flex-row">
-                <div class="basis-1/2 min-h-88">
-                    <img src="u.jpg" />
-                </div>
-                <div class="basis-1/2 mx-6 p-4">
-                    <h3 class="mb-6 text-4xl font-bold leading-normal">
-                        Why Choose Waymaker Services for Your Financial Needs
-                    </h3>
-                    <p class="text-justify">
-                        Ut nec ligula sit amet est ultrices malesuada eget quis
-                        libero. Pellentesque pharetra lacus sit amet ante
-                        eleifend, vitae volutpat lectus sodales. Nunc tristique
-                        rutrum nulla, non vulputate libero mollis sed. Vivamus
-                        condimentum dui sed pulvinar eleifend. Nullam nec mattis
-                        dui. Nulla aliquam vehicula sapien eget convallis. Ut
-                        vel nulla tellus. Aenean viverra, nibh ac elementum
-                        elementum, libero orci malesuada lorem, eu dictum libero
-                        sem ornare justo. Sed accumsan sem nec risus varius
-                        pharetra.
-                    </p>
-                </div>
-            </article>
+        <section class="w-full" style="display:flex; flex-direction:column; justify-content:space-evenly; align-items:center; height:100%; padding-top:4rem">
+            <div id="splash-logo" class="bg-img"></div>
+            <a href="index.html" id="splash-title" class="text-center">WAYMAKER SERVICES <br /> SDN BHD</a>
         </section>
+    </header>
 
-        <section class="mb-52 bg-white">testimony from happy customers</section>
+    <section class="h-screen bg-stone-200">
+        <article class="px-4 text-stone-600">
+            <div class="title mb-8">Our Services</div>
+            <ul class="grid grid-cols-2 gap-4 text-center text-xl font-bold">
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service1">
+                    Outsourced Accounting Services</li>
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service2">
+                    Payroll Management</li>
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service3">Tax
+                    Consultation &amp; Planning</li>
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service4">
+                    Company Secretarial Services</li>
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service5">
+                    Business Strategic Growth Consultation</li>
+                <li class="service border-2 border-solid border-slate-900 rounded-xl m-4 px-8 py-4" id="service6">
+                    Insurance Planning &amp; Policy Engagement</li>
+            </ul>
+        </article>
+    </section>
 
-        <footer
-            id="footer-fat"
-            class="fixed bottom-0 -z-10 w-full px-8 py-8 text-stone-200"
-            style="background-color: var(--my-blue-bg);"
-        >
-            <div class="flex">
-                <div class="basis-1/2">
-                    <p class="text-slate-50">
-                        <a href="conditions.html">Terms &amp; Conditions</a>
-                    </p>
-                    <p class="text-slate-400 text-sm">
-                        All rights reserved. &#169; 2023-2024, Waymaker Sdn Bhd
-                        (Reg. 202001038666, 1394987-K)
-                    </p>
-                </div>
 
-                <div class="basis-1/2">
-                    <nav class="flex mb-2 pl-6 text-right">
-                        <div class="basis-1/3">
-                            <ul class="text-slate-200">
-                                <li class="">
-                                    <a href="company.html">Company</a>
-                                </li>
-                                <li class="">
-                                    <a href="services.html">Services</a>
-                                </li>
-                            </ul>
-                        </div>
+    <div class="flex h-screen bg-white text-stone-200 text-center bg-slide1">
+        <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
+            <h3 class="text-center mb-6 text-6xl title">
+                Empowering Your Accounting Needs
+            </h3>
+            <p class="text-center text-2xl">We offer great services</p>
+            <input type="button" value="CONTACT NOW !"
+                class="m-4 p-4 border-2 border-solid border-stone-200 rounded-lg text-xl text-stone-200 font-bold"
+                style="background-color: var(--my-orange)" />
+        </div>
+    </div>
 
-                        <div class="basis-1/3">
-                            <ul class="text-slate-200">
-                                <li class="">
-                                    <a href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.">
-                                        Whatsapp
-                                        <img class="inline" src="assets/icons/whatsapp.svg"/>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="tel:+60182216019">
-                                        Phone
-                                        <img class="inline" src="assets/icons/phone.svg"/>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">
-                                        Email
-                                        <img class="inline" src="assets/icons/email.svg"/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="basis-1/3">
-                            <ul class="text-slate-200">
-                                <li class="">
-                                    <a href="https://www.google.com/maps?q=3.009424,101.714462" target="_blank">
-                                        Google Map
-                                        <img class="inline" src="assets/icons/googleMap.svg"/>
-                                    </a>
-                                </li>
-                                <li class="">
-                                    <a href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17" target="_blank">
-                                        Waze
-                                        <img class="inline" src="assets/icons/waze.svg"/>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+    <section class="h-screen px-16 py-8 bg-white">
+        <article class="flex flex-row">
+            <div class="basis-1/2 min-h-88">
+                <img src="u.jpg" />
             </div>
-        </footer>
+            <div class="basis-1/2 mx-6 p-4">
+                <h3 class="mb-6 text-4xl font-bold leading-normal">
+                    Why Choose Waymaker Services for Your Financial Needs
+                </h3>
+                <p class="text-justify">
+                    Ut nec ligula sit amet est ultrices malesuada eget quis
+                    libero. Pellentesque pharetra lacus sit amet ante
+                    eleifend, vitae volutpat lectus sodales. Nunc tristique
+                    rutrum nulla, non vulputate libero mollis sed. Vivamus
+                    condimentum dui sed pulvinar eleifend. Nullam nec mattis
+                    dui. Nulla aliquam vehicula sapien eget convallis. Ut
+                    vel nulla tellus. Aenean viverra, nibh ac elementum
+                    elementum, libero orci malesuada lorem, eu dictum libero
+                    sem ornare justo. Sed accumsan sem nec risus varius
+                    pharetra.
+                </p>
+            </div>
+        </article>
+    </section>
 
-        <script>
-            const toggleClass = (el, condition, className) => {
-                if(condition) {
-                    el.classList.add(className);
-                } else {
-                    el.classList.remove(className);
-                }
+    <section class="mb-52 bg-white">testimony from happy customers</section>
+
+    <footer class="fixed bottom-0 -z-10 w-full px-base" style="background-color:var(--my-blue-bg-darker)">
+        <div class="nav-stripe" style="justify-content:space-between;">
+            <div id="nav-bottom-left">
+                <a class="text-slate-100 animate-line" href="conditions.html">Terms &amp; Conditions</a>
+                <p class="text-slate-300">
+                    Waymaker Sdn Bhd (Reg. 202001038666, 1394987-K) <br />
+                    All rights reserved. &#169; 2023-2024.
+                </p>
+            </div>
+
+            <nav id="nav-bottom-right" class="text-slate-200" style="display:flex; column-gap:3rem;">
+                <ul>
+                    <li><a class="nav-stripe-icon" href="company.html">Company</a></li>
+                    <li><a class="nav-stripe-icon" href="services.html">Services</a></li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a class="nav-stripe-icon"
+                            href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.">
+                            Whatsapp
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/whatsapp.svg);">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-stripe-icon" href="tel:+60182216019"> Phone
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/phone.svg);">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-stripe-icon"
+                            href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">
+                            Email
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/email.svg);">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <a class="nav-stripe-icon" href="https://www.google.com/maps?q=3.009424,101.714462"
+                            target="_blank"> Google Map
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/googlemap.svg);">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-stripe-icon"
+                            href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17" target="_blank">
+                            Waze
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/waze.svg);"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const toggleClass = (el, condition, className) => {
+            if (condition) {
+                el.classList.add(className);
+            } else {
+                el.classList.remove(className);
             }
+        }
 
-            const headerFat = document.getElementById("header-fat");
-            const headerSlim = document.getElementById("header-slim");
-            const footerFat = document.getElementById("footer-fat");
-            const service1 = document.getElementById("service1");
-            const service2 = document.getElementById("service2");
-            const service3 = document.getElementById("service3");
-            const service4 = document.getElementById("service4");
-            const service5 = document.getElementById("service5");
-            const service6 = document.getElementById("service6");
+        const headerFat = document.getElementById("header-fat");
+        const headerSlim = document.getElementById("header-slim");
+        const splashLogo = document.getElementById("splash-logo");
 
-            // NOTE: navigation toggler
-            new IntersectionObserver(
-                (entries) => {
-                    const entry = entries[0];
-                    const isShow = !entry.isIntersecting;
+        const footerFat = document.getElementById("footer-fat");
+        const service1 = document.getElementById("service1");
+        const service2 = document.getElementById("service2");
+        const service3 = document.getElementById("service3");
+        const service4 = document.getElementById("service4");
+        const service5 = document.getElementById("service5");
+        const service6 = document.getElementById("service6");
 
-                    toggleClass(headerSlim, isShow, "show");
-                    toggleClass(footerFat, isShow, "show");
-                },
-                { threshold: 0 },
-            ).observe(headerFat);
+        // NOTE: navigation toggler
+        const navRepositionAndHide = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                const isReposition = !entry.isIntersecting;
+                console.log("recon", isReposition)
+                toggleClass(headerSlim, isReposition, "hide");
+            },
+            { threshold: 0 },
+        )
+        const navShow = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                const isShow = !entry.isIntersecting;
+                console.log("showing", isShow)
+                toggleClass(headerSlim, isShow, "reposition");
+                toggleClass(headerSlim, isShow, "show");
+            },
+            { threshold: 0 },
+        )
+        navRepositionAndHide.observe(splashLogo);
+        navShow.observe(headerFat);
 
-            const showService = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((e)=>{
-                        const entry = e;
-                        const isShow = entry.isIntersecting;
-                        toggleClass(entry.target, isShow, "show");
-                    })
-                },
-                { threshold: 1 },
-            )
-            showService.observe(service1);
-            showService.observe(service2);
-            showService.observe(service3);
-            showService.observe(service4);
-            showService.observe(service5);
-            showService.observe(service6);
-        </script>
-    </body>
+        /*
+        const showService = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((e) => {
+                    const entry = e;
+                    const isShow = entry.isIntersecting;
+                    toggleClass(entry.target, isShow, "show");
+                })
+            },
+            { threshold: 1 },
+        )
+        showService.observe(service1);
+        showService.observe(service2);
+        showService.observe(service3);
+        showService.observe(service4);
+        showService.observe(service5);
+        showService.observe(service6);
+        */
+    </script>
+</body>
+
 </html>

@@ -11,50 +11,59 @@
     --my-orange: hsl(45 100% 70%);
 }
 
-.bg-header {
+#header-fat {
+    height: 100vh;
     /*
         background-image: url("subtle-prism.svg");
         background-image: url("spectrum-gradient1.svg");
         background-image: url("spectrum-gradient2.svg");
     */
-    background-image: url("subtle-prism.svg");
+    background-image: url("svg/subtle-prism.svg");
     background-size: cover;
     background-attachment: fixed;
 }
 
-#header-slim,
-#footer-fat {
+#header-slim {
+    transition: opacity 0.3s;
+}
+
+#header-slim #header-logo {
     opacity: 0;
-    background-color: white;
-    transition: all 0.3s;
 }
 
-#header-slim.show,
-#footer-fat.show {
+#header-slim.reposition {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+    /* background-color: var(--my-blue); */
+    background-image: url("svg/subtle-prism.svg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header-slim.reposition #header-logo {
     opacity: 1;
-    background-color: var(--my-blue);
 }
 
-/* SECTION: top right */
-.nav-logo {
-    display: grid;
-    grid-template-columns: auto auto;
+#header-slim.hide {
+    opacity: 0;
 }
 
-.nav-top {
-    display: grid;
-    grid-template-columns: auto auto auto;
+#header-slim.show {
+    opacity: 1;
 }
 
-.nav-item-top {
-    display: inline-block;
-    width: 100%;
-    padding: 16px 32px;
+#splash-logo {
+    width: 15rem;
+    height: 15rem;
+    background-image: url('logo.png');
+    transform: scale(2, 2);
+    filter: brightness(0) invert(1);
 }
 
-.title {
-    display: block;
-    text-align: center;
+#splash-title {
+    font-family: 'Switzer-ExtraLight', Arial, sans-serif;
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.2em;
