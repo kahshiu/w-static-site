@@ -12,47 +12,6 @@
             background-attachment: fixed;
             background-size: cover;
         }
-
-        /*
-        #service1 {
-            opacity: 1;
-            transition: all 0.5s ease-in 0.5s;
-        }
-
-        #service2 {
-            opacity: 1;
-            transition: all 0.5s ease-in 1.0s;
-        }
-
-        #service3 {
-            opacity: 1;
-            transition: all 0.5s ease-in 1.5s;
-        }
-
-        #service4 {
-            opacity: 1;
-            transition: all 0.5s ease-in 2.0s;
-        }
-
-        #service5 {
-            opacity: 1;
-            transition: all 0.5s ease-in 2.5s;
-        }
-
-        #service6 {
-            opacity: 1;
-            transition: all 0.5s ease-in 3.0s;
-        }
-            */
-
-        /*
-            #service1.show { opacity: 1; }
-            #service2.show { opacity: 1; }
-            #service3.show { opacity: 1; }
-            #service4.show { opacity: 1; }
-            #service5.show { opacity: 1; }
-            #service6.show { opacity: 1; }
-            */
     </style>
     <script>
         tailwind.config = {
@@ -139,70 +98,63 @@
     </div>
     <section class="px-base bg-white">
         <article class="flex flex-row" style="padding-top:4rem; padding-bottom:4rem; margin-bottom: 20rem">
-            <!---
-            <div id="img-reason" class="basis-1/2 bg-img reason-default" style="position:relative; margin-top:4.5rem;">
-            -->
-            <div id="img-reason" class="basis-1/2 bg-img" style="position:relative; margin-top:4.5rem;">
-                <div style="position:absolute; top:0px; left:0px; width:100%; height:100%; transition: all"></div>
-                <div id="img-reason-blind" style="position:absolute; top:0px; left:0px; width:100%; height:100%"></div>
-            </div>
+
+            <div id="reasonPic1" class="basis-1/2 bg-img blink save-time" style="margin-top:4.5rem;"></div>
+            <div id="reasonPic2" class="basis-1/2 bg-img blink save-cost" style="margin-top:4.5rem; display:none"></div>
+            <div id="reasonPic3" class="basis-1/2 bg-img blink consultancy" style="margin-top:4.5rem; display:none"></div>
+            <div id="reasonPic4" class="basis-1/2 bg-img blink automate" style="margin-top:4.5rem; display:none"></div>
+            <div id="reasonPic5" class="basis-1/2 bg-img blink scale-account" style="margin-top:4.5rem; display:none"></div>
+
             <div class="basis-1/2" style="margin-top:4.5rem; margin-bottom:4.5rem">
 
                 <h3 class="switzer-xthin-italic" style="font-size:2.5rem; margin-bottom:2.5rem">
                     Why Outsourced Accounting is the Right Choice
                 </h3>
 
-                <ul id="reason-list">
-                    <li id="save-time">Save Time</li>
-                    <li id="save-cost">Cost Cutting</li>
-                    <li id="consultancy">Dedicated Accountancy &amp; Tax Advisor</li>
-                    <li id="automate">Maximise Automation Technologies</li>
-                    <li id="scale-account">Scale Accounting with Ease</li>
+                <ul id="reason-list" class="" style="margin:-2rem">
+                    <li target="reasonPic1" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
+                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        Save Time
+                    </li>
+                    <li target="reasonPic2" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
+                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        Cost Cutting
+                    </li>
+                    <li target="reasonPic3" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
+                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        Dedicated Accountancy &amp; Tax Advisor
+                    </li>
+                    <li target="reasonPic4" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
+                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        Maximise Automation Technologies
+                    </li>
+                    <li target="reasonPic5" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
+                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        Scale Accounting with Ease
+                    </li>
                 </ul>
 
                 <script>
-                    /*
-                    const getAnimation = (elem) => {
-                        const styles = window.getComputedStyle(elem);
-                        const animName = styles.getPropertyValue("animation-name");
-                        return animName;
+                    const targets = {
+                        reasonPic1: document.getElementById("reasonPic1"),
+                        reasonPic2: document.getElementById("reasonPic2"),
+                        reasonPic3: document.getElementById("reasonPic3"),
+                        reasonPic4: document.getElementById("reasonPic4"),
+                        reasonPic5: document.getElementById("reasonPic5")
                     }
+                    document.getElementById("reason-list").onmouseover = (e) => {
+                        const s = e.target;
+                        const attr = s.getAttribute("target")
+                        if(!attr) return;
 
-                    const isAnimating = (elem, animName) => {
-                        return getAnimation(elem) === animName;
-                    }
-                    */
-
-                    const imgReason = (reasonId) => {
-                        const source = document.getElementById(reasonId);
-                        const target = document.getElementById("img-reason");
-                        const blind = document.getElementById("img-reason-blind");
-                        const targetImgClass = reasonId;
-
-                        source.onmouseover = () => { 
-                            const hasBlink = blind.classList.contains("blink")
-                            if(hasBlink){
-                                blind.classList.remove("blink")
-                                target.classList.remove(targetImgClass); 
-                            }
-
-                            blind.classList.add("blink")
-                            target.classList.add(targetImgClass); 
+                        for(key in targets) {
+                            targets[key].style.display = "none";
                         }
-                        /*
-                        blind.addEventListener('animationend', () => {
-                            blind.classList.remove("blink")
-                            target.classList.remove(targetImgClass); 
-                        });
-                        */
-                        source.onmouseout = () => { 
-                        }
+
+                        const target = targets[attr]
+                        target.style.display = "block";
                     }
-                    imgReason("save-time")
-                    imgReason("save-cost")
-                    imgReason("consultancy")
-                    imgReason("automate")
-                    imgReason("scale-account")
+                    
                 </script>
             </div>
         </article>
@@ -316,25 +268,6 @@
         )
         navRepositionAndHide.observe(splashLogo);
         navShow.observe(headerFat);
-
-        /*
-        const showService = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((e) => {
-                    const entry = e;
-                    const isShow = entry.isIntersecting;
-                    toggleClass(entry.target, isShow, "show");
-                })
-            },
-            { threshold: 1 },
-        )
-        showService.observe(service1);
-        showService.observe(service2);
-        showService.observe(service3);
-        showService.observe(service4);
-        showService.observe(service5);
-        showService.observe(service6);
-        */
     </script>
 </body>
 

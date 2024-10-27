@@ -432,29 +432,18 @@ a.nav-stripe-icon:hover::before {
 }
 
 /* TODO reason blinking img on hover*/
-@keyframes blink1 {
+@keyframes blink {
     0% { opacity: 0 }
     100% { opacity: 1 }
 }
 
 .flash {
-    animation-name: blink1;
+    animation-name: blink;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
 }
 
-@keyframes blink {
-    0% { opacity: 1 }
-    100% { opacity: 0 }
-}
-
-#img-reason-blind {
-    display: none;
-    background-color: white;
-    opacity: 0;
-}
-
-#img-reason-blind.blink {
+.blink {
     display: block;
     animation-name: blink;
     animation-duration: 1.5s;
@@ -463,32 +452,21 @@ a.nav-stripe-icon:hover::before {
 
 #reason-list:hover {
     cursor: pointer;
-    animation-name: blink;
 }
 
 #reason-list li {
     font-family: 'Switzer-regular', Arial, sans-serif;
     font-size: 1.6rem;
+}
+
+#reason-list li .bg-img {
+    opacity: 0;
     transition: all 0.3s;
 }
 
-#reason-list li:hover,
-#reason-list li:focus,
-#reason-list li:active {
+#reason-list li:hover .bg-img {
+    opacity: 1;
 }
-
-
-/*
-    -webkit-animation-name: hvr-buzz-out;
-    animation-name: hvr-buzz-out;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-}
-    */
 
 /*
 SPECIFIC
@@ -566,7 +544,7 @@ SPECIFIC
     display: inline-block;
     width: 1.3rem;
     height: 1.3rem;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 /*
