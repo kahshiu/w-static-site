@@ -432,8 +432,16 @@ a.nav-stripe-icon:hover::before {
 }
 
 /* TODO reason blinking img on hover*/
-@keyframes banner-promote {}
+@keyframes blink1 {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
 
+.flash {
+    animation-name: blink1;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
 
 @keyframes blink {
     0% { opacity: 1 }
@@ -445,6 +453,7 @@ a.nav-stripe-icon:hover::before {
     background-color: white;
     opacity: 0;
 }
+
 #img-reason-blind.blink {
     display: block;
     animation-name: blink;

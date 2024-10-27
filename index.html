@@ -91,7 +91,7 @@
 
     <section class="h-screen px-base bg-stone-200 text-stone-500">
         <article style="padding-top:4rem">
-            <h1 class="switzer-xthin text-center" style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
+            <h1 class="switzer-xthin-italic text-center" style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
 
             <ul class="flex text-xl font-bold" style="justify-content:center; flex-wrap:wrap; width:75%; margin-left:auto; margin-right:auto">
                 <li class="service-chip" id="service1"> Outsourced Accounting Service </li>
@@ -101,44 +101,109 @@
                 <li class="service-chip" id="service5"> Business Strategic Growth Consultation </li>
                 <li class="service-chip" id="service6"> Insurance Planning &amp; Policy Engagement </li>
             </ul>
+
+            <div class="nav-stripe text-slate-600" style="justify-content:center; margin-top:2.5rem">
+                <a class="switzer-black animate-line animate-line-black" style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="services.html">Discover More</a>
+                <a class="switzer-black animate-line animate-line-black" style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="contacts.html">Contact Us</a>
+            </div>
         </article>
     </section>
 
     <div class="flex h-screen bg-white text-stone-200 text-center bg-slide1">
         <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
-            <h3 class="text-center mb-6 text-6xl title">
-                Empowering Your Accounting Needs
+            <h3 id="banner-promote" class="switzer-xthin-italic center-x text-center mb-6 text-6xl" style="width:75%;"> 
+                <div id="t1" class="flash" style="width:100%;"> Empowering Accounting Needs </div>
+                <div id="t2" class="flash" style="width:100%; display:none"> Unlock Efficient Business Success Through Outsourced Accounting </div>
+                <div id="t3" class="flash" style="width:100%; display:none"> Maximise Financial Management Through Our Tax Consultancy </div>
             </h3>
-            <p class="text-center text-2xl">We offer great services</p>
-            <input type="button" value="CONTACT NOW !"
-                class="m-4 p-4 border-2 border-solid border-stone-200 rounded-lg text-xl text-stone-200 font-bold"
-                style="background-color: var(--my-orange)" />
+            <p class="switzer-xthin center-x text-center text-2xl" style="width:75%; font-size:2.0rem; padding-top:2rem">
+                With years of experience, we have a 
+                solid proven track record for delivering 
+                exceptional outsourced accounting services. 
+            </p>
+            <script>
+                const tElems = [
+                    document.getElementById("t2"), 
+                    document.getElementById("t3"), 
+                    document.getElementById("t1")
+                ]
+                const rotate = () => {
+                    tElems.forEach((e) => { e.style.display = "none"; })
+                    const target = tElems.shift();
+                    target.style.display = "block";
+                    tElems.push(target);
+                }
+                setInterval(rotate, 7000)
+            </script>
         </div>
     </div>
-
-    <section class="px-base mb-56 bg-white" style="height:calc(100vh - 12rem)">
-        <article class="flex flex-row" style="padding-top:4rem">
-            <div class="basis-1/2" style="margin-top:4.5rem;"">
-                <img src="u.jpg" />
+    <section class="px-base bg-white">
+        <article class="flex flex-row" style="padding-top:4rem; padding-bottom:4rem; margin-bottom: 20rem">
+            <!---
+            <div id="img-reason" class="basis-1/2 bg-img reason-default" style="position:relative; margin-top:4.5rem;">
+            -->
+            <div id="img-reason" class="basis-1/2 bg-img" style="position:relative; margin-top:4.5rem;">
+                <div style="position:absolute; top:0px; left:0px; width:100%; height:100%; transition: all"></div>
+                <div id="img-reason-blind" style="position:absolute; top:0px; left:0px; width:100%; height:100%"></div>
             </div>
             <div class="basis-1/2" style="margin-top:4.5rem; margin-bottom:4.5rem">
 
-                <h3 class="switzer-xthin" style="font-size:2.5rem; margin-bottom:2.5rem">
-                    Why Choose Waymaker Services for Your Financial Needs
+                <h3 class="switzer-xthin-italic" style="font-size:2.5rem; margin-bottom:2.5rem">
+                    Why Outsourced Accounting is the Right Choice
                 </h3>
 
-                <p class="text-justify">
-                    Ut nec ligula sit amet est ultrices malesuada eget quis
-                    libero. Pellentesque pharetra lacus sit amet ante
-                    eleifend, vitae volutpat lectus sodales. Nunc tristique
-                    rutrum nulla, non vulputate libero mollis sed. Vivamus
-                    condimentum dui sed pulvinar eleifend. Nullam nec mattis
-                    dui. Nulla aliquam vehicula sapien eget convallis. Ut
-                    vel nulla tellus. Aenean viverra, nibh ac elementum
-                    elementum, libero orci malesuada lorem, eu dictum libero
-                    sem ornare justo. Sed accumsan sem nec risus varius
-                    pharetra.
-                </p>
+                <ul id="reason-list">
+                    <li id="save-time">Save Time</li>
+                    <li id="save-cost">Cost Cutting</li>
+                    <li id="consultancy">Dedicated Accountancy &amp; Tax Advisor</li>
+                    <li id="automate">Maximise Automation Technologies</li>
+                    <li id="scale-account">Scale Accounting with Ease</li>
+                </ul>
+
+                <script>
+                    /*
+                    const getAnimation = (elem) => {
+                        const styles = window.getComputedStyle(elem);
+                        const animName = styles.getPropertyValue("animation-name");
+                        return animName;
+                    }
+
+                    const isAnimating = (elem, animName) => {
+                        return getAnimation(elem) === animName;
+                    }
+                    */
+
+                    const imgReason = (reasonId) => {
+                        const source = document.getElementById(reasonId);
+                        const target = document.getElementById("img-reason");
+                        const blind = document.getElementById("img-reason-blind");
+                        const targetImgClass = reasonId;
+
+                        source.onmouseover = () => { 
+                            const hasBlink = blind.classList.contains("blink")
+                            if(hasBlink){
+                                blind.classList.remove("blink")
+                                target.classList.remove(targetImgClass); 
+                            }
+
+                            blind.classList.add("blink")
+                            target.classList.add(targetImgClass); 
+                        }
+                        /*
+                        blind.addEventListener('animationend', () => {
+                            blind.classList.remove("blink")
+                            target.classList.remove(targetImgClass); 
+                        });
+                        */
+                        source.onmouseout = () => { 
+                        }
+                    }
+                    imgReason("save-time")
+                    imgReason("save-cost")
+                    imgReason("consultancy")
+                    imgReason("automate")
+                    imgReason("scale-account")
+                </script>
             </div>
         </article>
     </section>
