@@ -19,7 +19,7 @@
         background-image: url("spectrum-gradient1.svg");
         background-image: url("spectrum-gradient2.svg");
     */
-    background-image: url("svg/subtle-prism.svg");
+    background-image: url("svg/subtle-prism2.svg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -38,7 +38,7 @@
     left: 0px;
     z-index: 50;
     /* background-color: var(--my-blue); */
-    background-image: url("svg/subtle-prism.svg");
+    background-image: url("svg/subtle-prism2.svg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -61,7 +61,7 @@
 }
 
 #splash-title {
-    font-family: 'Switzer-ExtraLight', Arial, sans-serif;
+    font-family: 'Switzer-Bold', Arial, sans-serif;
     font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.2em;
