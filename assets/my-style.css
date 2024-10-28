@@ -150,6 +150,7 @@ REUSABLE
 }
 
 .my-text h3,
+.my-text ul,
 .my-text p  {
     margin-bottom: 1.6rem;
 }
