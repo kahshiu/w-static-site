@@ -10,16 +10,18 @@
 </head>
 
 <body class="font-sans">
-    <nav style="background-color:var(--my-blue-bg); color:var(--my-gray)">
+
+    <nav class="nav-top">
         <div class="nav-stripe w-full px-base"
             style="align-items:baseline; justify-content:space-between; padding-top:0.9rem; padding-bottom:0.9rem">
-            <div class="nav-stripe" style="column-gap:1rem;">
+
+            <div class="nav-stripe nav-top-left">
                 <div class="nav-top-logo" style="width:2rem; height:2rem;"></div>
                 <a class="switzer-black hvr-bounce-to-right" style="font-size:30px; font-weight:bold; letter-spacing:0.3rem;"
                     href="index.html">WAYMAKER</a>
             </div>
 
-            <ul class="nav-stripe switzer-regular" style="column-gap:3rem; font-size:20px">
+            <ul class="nav-stripe nav-top-right switzer-regular">
                 <li><a class="animate-line" href="company.html">Company</a></li>
                 <li><a class="animate-line" href="services.html">Services</a></li>
                 <li><a class="animate-line" href="contacts.html">Contact Us</a></li>
@@ -28,8 +30,8 @@
     </nav>
 
     <div class="px-base" style="margin-top:2rem; background-color:white;">
-        <div style="display:flex; justify-content:center; column-gap:8rem; padding-bottom:5rem;">
-            <div style="order:10">
+        <div style="display:flex; justify-content:center; column-gap:8rem; padding-bottom:5rem; flex-wrap:wrap;">
+            <div style="order:10;">
                 <h1 class="switzer-xthin-italic text-slate-500" style="font-size:4rem">Our Contacts</h1>
                 <div>
                     <b class="switzer-regular text-uppercase" style="vertical-align:middle; font-size:22px">Call Us: </b>
@@ -40,19 +42,32 @@
                     <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;"
                         href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">account@wmaker.com.my</a>
                 </div>
-                <a class="bg-img whatsapp-platinum hvr-buzz-out"
-                    style="display:block; width:15rem; height:6rem; margin-left:auto; margin-right:auto"
-                    href="https://wa.me/60182216019?text=Hi, I'm interested to know more about services offered by Waymaker"
-                    target="_blank">
-                </a>
+                <div>
+                    <b class="switzer-regular text-uppercase" style="vertical-align:middle; font-size:22px">Follow us: </b>
+                    <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;"
+                        href="https://www.facebook.com/people/Waymaker-Services/100076593145321/?mibextid=LQQJ4d" target="_blank">Facebook</a>
+                </div>
+                <div class="nav-stripe w-full" style="justify-content:space-evenly">
+                    <a class="bg-img facebook hvr-buzz-out"
+                        style="display:block; width:5rem; height:5rem;"
+                        href="https://www.facebook.com/people/Waymaker-Services/100076593145321/?mibextid=LQQJ4d"
+                        target="_blank">
+                    </a>
+                    <a class="bg-img whatsapp-platinum hvr-buzz-out"
+                        style="display:block; width:15rem; height:6rem;"
+                        href="https://wa.me/60182216019?text=Hi, I'm interested to know more about services offered by Waymaker"
+                        target="_blank">
+                    </a>
+                </div>
             </div>
             <div class="bg-img qr-code" style="min-width:15rem; min-height:15rem; margin-top:auto; margin-bottom:auto"></div>
         </div>
 
+
         <hr />
         <div style="display:flex; justify-content:center; column-gap:8rem; padding-bottom:5rem; margin-bottom:15rem;">
             <div style="margin-top:1.5rem; font-size:22px;" class="text-slate-700">
-                <h1 class="switzer-xthin-italic text-slate-500 text-right" style="font-size:4rem">Our Location</h1>
+                <h1 class="switzer-xthin-italic text-slate-500" style="font-size:4rem">Our Location</h1>
 
                 <b class="switzer-regular text-uppercase">Waymaker Services Sdn Bhd </b>
                 <address class="switzer-regular">
@@ -80,12 +95,6 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-
-        <!---
-            <div class="" style="margin-top:1.5rem; border:0;">
-                <div class="office-pic rounded-xl" style="width:600px; height:450px"></div>
-            </div>
-        -->
     </div>
 
     <footer class="fixed bottom-0 -z-10 w-full px-base" style="background-color:var(--my-blue-bg-darker)">

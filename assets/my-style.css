@@ -14,11 +14,6 @@
 
 #header-fat {
     height: 100vh;
-    /*
-        background-image: url("subtle-prism.svg");
-        background-image: url("spectrum-gradient1.svg");
-        background-image: url("spectrum-gradient2.svg");
-    */
     background-image: url("svg/subtle-prism2.svg");
     background-size: cover;
     background-attachment: fixed;
@@ -151,7 +146,7 @@ REUSABLE
 
 .my-text h3,
 .my-text ul,
-.my-text p  {
+.my-text p {
     margin-bottom: 1.6rem;
 }
 
@@ -434,8 +429,13 @@ a.nav-stripe-icon:hover::before {
 
 /* TODO reason blinking img on hover*/
 @keyframes blink {
-    0% { opacity: 0 }
-    100% { opacity: 1 }
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
 }
 
 .flash {
@@ -469,9 +469,7 @@ a.nav-stripe-icon:hover::before {
     opacity: 1;
 }
 
-/*
-SPECIFIC
-*/
+/* SPECIFICS */
 .nav-top {
     background-color: var(--my-blue-bg);
     color: var(--my-gray);
@@ -483,6 +481,16 @@ SPECIFIC
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(0.1) invert(1);
+}
+
+.nav-top-left {
+    column-gap: 1rem;
+}
+
+.nav-top-right {
+    justify-content: space-around;
+    column-gap: 3rem;
+    font-size: 20px;
 }
 
 #nav-bottom-left {
@@ -548,9 +556,7 @@ SPECIFIC
     vertical-align: middle;
 }
 
-/*
-INDEX: REASONS
-*/
+/* INDEX: REASONS */
 .reason-default {
     background-image: url('img-reasons/save-time.webp');
 }
@@ -575,15 +581,17 @@ INDEX: REASONS
     background-image: url('img-reasons/scaling-account.webp');
 }
 
-/*
-CONTACTS
-*/
+/* CONTACTS */
 .qr-code {
     background-image: url('icons-old/qrcode.png');
 }
 
 .whatsapp-platinum {
     background-image: url('icons-old/whatsapp-platinum.png');
+}
+
+.facebook {
+    background-image: url('icons-old/facebook.png');
 }
 
 .googlemap-logo {
