@@ -10,17 +10,43 @@
 </head>
 
 <body class="font-sans">
+    <style>
+        .target {
+            display: none;
+            width: 100%;
+        }
+        .target li {
+            /*display: block;*/
+            font-size: 1.9rem;
+            padding: 0.9rem 0rem;
+        }
+        .target li:last-child {
+            padding-bottom: 3.9rem;
+        }
+        .nav-top:hover ul {
+            display: block;
+        }
+    </style>
+
     <nav class="nav-top">
-        <div class="nav-stripe w-full px-base"
+        <div class="nav-stripe w-full px-base flex-col"
             style="align-items:baseline; justify-content:space-between; padding-top:0.9rem; padding-bottom:0.9rem">
 
             <div class="nav-stripe nav-top-left">
-                <div class="nav-top-logo" style="width:2rem; height:2rem;"></div>
-                <a class="switzer-black hvr-bounce-to-right" style="font-size:30px; font-weight:bold; letter-spacing:0.3rem;"
-                    href="index.html">WAYMAKER</a>
+                <div class="nav-top-logo hidden md:block" style="width:2.6rem; height:2.6rem;"></div>
+                <div class="nav-top-hamburger block md:hidden" style="width:2.6rem; height:2.6rem;"></div>
+                <a class="switzer-black hvr-bounce-to-right"
+                    style="font-size:30px; font-weight:bold; letter-spacing:0.3rem;" href="index.html">WAYMAKER</a>
             </div>
 
-            <ul class="nav-stripe nav-top-right switzer-regular">
+            <!---
+            <ul class="nav-stripe nav-top-right switzer-regular hidden md:flex">
+                <li><a class="animate-line" href="company.html">Company</a></li>
+                <li><a class="animate-line" href="services.html">Services</a></li>
+                <li><a class="animate-line" href="contacts.html">Contact Us</a></li>
+            </ul>
+            -->
+            <ul class="target">
                 <li><a class="animate-line" href="company.html">Company</a></li>
                 <li><a class="animate-line" href="services.html">Services</a></li>
                 <li><a class="animate-line" href="contacts.html">Contact Us</a></li>
@@ -33,33 +59,39 @@
             <div style="order:10;">
                 <h1 class="switzer-xthin-italic text-slate-500" style="font-size:4rem">Our Contacts</h1>
                 <div>
-                    <b class="switzer-regular text-uppercase" style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Call Us: </b>
-                    <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;" href="tel:+60182216019">+6018-221 6019</a>
+                    <b class="switzer-regular text-uppercase"
+                        style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Call Us: </b>
+                    <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;"
+                        href="tel:+60182216019">+6018-221 6019</a>
                 </div>
                 <div>
-                    <b class="switzer-regular text-uppercase" style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Send Email: </b>
+                    <b class="switzer-regular text-uppercase"
+                        style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Send Email:
+                    </b>
                     <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;"
                         href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">account@wmaker.com.my</a>
                 </div>
                 <div>
-                    <b class="switzer-regular text-uppercase" style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Follow us: </b>
+                    <b class="switzer-regular text-uppercase"
+                        style="vertical-align:middle; font-size:22px; display:inline-block; width: 10rem">Follow us:
+                    </b>
                     <a class="switzer-xthin-italic hvr-grow" style="margin-left:1.5rem; font-size:2rem;"
-                        href="https://www.facebook.com/people/Waymaker-Services/100076593145321/?mibextid=LQQJ4d" target="_blank">Facebook</a>
+                        href="https://www.facebook.com/people/Waymaker-Services/100076593145321/?mibextid=LQQJ4d"
+                        target="_blank">Facebook</a>
                 </div>
                 <div class="nav-stripe w-full" style="justify-content:space-evenly">
-                    <a class="bg-img facebook hvr-buzz-out"
-                        style="display:block; width:5rem; height:5rem;"
+                    <a class="bg-img facebook hvr-buzz-out" style="display:block; width:5rem; height:5rem;"
                         href="https://www.facebook.com/people/Waymaker-Services/100076593145321/?mibextid=LQQJ4d"
                         target="_blank">
                     </a>
-                    <a class="bg-img whatsapp-platinum hvr-buzz-out"
-                        style="display:block; width:15rem; height:6rem;"
+                    <a class="bg-img whatsapp-platinum hvr-buzz-out" style="display:block; width:15rem; height:6rem;"
                         href="https://wa.me/60182216019?text=Hi, I'm interested to know more about services offered by Waymaker"
                         target="_blank">
                     </a>
                 </div>
             </div>
-            <div class="bg-img qr-code" style="min-width:15rem; min-height:15rem; margin-top:auto; margin-bottom:auto"></div>
+            <div class="bg-img qr-code" style="min-width:15rem; min-height:15rem; margin-top:auto; margin-bottom:auto">
+            </div>
         </div>
 
 
@@ -96,13 +128,38 @@
         </div>
     </div>
 
-    <footer class="fixed bottom-0 -z-10 w-full px-base" style="background-color:var(--my-blue-bg-darker)">
+    <footer class="fixed bottom-0 -z-10 w-full px-base block md:hidden"
+        style="background-color:var(--my-blue-bg-darker)">
+        <style>
+            .mobile-footer {
+                display: flex;
+                justify-content:space-between;
+                padding: 0.9rem 0rem;
+            }
+            .mobile-footer a {
+                display: inline-block;
+                width: 2.5rem;
+                height: 2.5rem;
+                filter: brightness(0) invert(1);
+                background-size: contain;
+            }
+        </style>
+        <div class="mobile-footer" class="text-slate-300">
+            <a class="phone" href="tel:+6018221601"> </a>
+            <a class="whatsapp" href="https://wa.me/60182216019?text=Hi, I'm interested to know more about services offered by Waymaker"> </a>
+            <a class="email" href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20..."> </a>
+        </div>
+    </footer>
+
+
+    <footer class="fixed bottom-0 -z-10 w-full px-base hidden md:block"
+        style="background-color:var(--my-blue-bg-darker)">
         <div class="nav-stripe" style="justify-content:space-between;">
             <div id="nav-bottom-left">
                 <a class="text-slate-100 animate-line" href="conditions.html">Terms &amp; Conditions</a>
                 <p class="text-slate-300">
                     Waymaker Services Sdn. Bhd. (Reg. 202001038666, 1394987-K) <br />
-                    All rights reserved. &#169; 2023-2024. 
+                    All rights reserved. &#169; 2023-2024.
                 </p>
             </div>
 
@@ -114,30 +171,41 @@
 
                 <ul>
                     <li>
-                        <a class="nav-stripe-icon" href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE."> Whatsapp 
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/whatsapp.svg);"></div>
+                        <a class="nav-stripe-icon"
+                            href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.">
+                            Whatsapp
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/whatsapp.svg);">
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon" href="tel:+60182216019"> Phone 
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/phone.svg);"></div>
+                        <a class="nav-stripe-icon" href="tel:+60182216019"> Phone
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/phone.svg);">
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon" href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20..."> Email
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/email.svg);"></div>
-                        </a> 
+                        <a class="nav-stripe-icon"
+                            href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">
+                            Email
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/email.svg);">
+                            </div>
+                        </a>
                     </li>
                 </ul>
 
                 <ul>
                     <li>
-                        <a class="nav-stripe-icon" href="https://maps.app.goo.gl/YtKvGwJ75gYz5fJc6" target="_blank"> Google Map
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/google-map.svg);"></div>
+                        <a class="nav-stripe-icon" href="https://maps.app.goo.gl/YtKvGwJ75gYz5fJc6" target="_blank">
+                            Google Map
+                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/google-map.svg);">
+                            </div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon" href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17" target="_blank"> Waze 
+                        <a class="nav-stripe-icon"
+                            href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17" target="_blank">
+                            Waze
                             <div class="bg-img icon-bottom" style="background-image: url(assets/icons/waze.svg);"></div>
                         </a>
                     </li>

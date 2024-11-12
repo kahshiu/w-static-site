@@ -10,6 +10,9 @@
     --my-gray-darker: #a0a0a0;
     --my-green: #009688;
     --my-orange: hsl(45 100% 70%);
+
+    --my-base-pl: 3rem;
+    --my-base-pr: 3rem;
 }
 
 #header-fat {
