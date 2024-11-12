@@ -483,6 +483,14 @@ a.nav-stripe-icon:hover::before {
     filter: brightness(0.1) invert(1);
 }
 
+.nav-top-hamburger {
+    background-image: url('svg/hamburger.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.1) invert(1);
+}
+
 .nav-top-left {
     column-gap: 1rem;
 }
@@ -604,4 +612,16 @@ a.nav-stripe-icon:hover::before {
 
 .office-pic {
     background-image: url('waymaker-office-md.jpeg');
+}
+
+.whatsapp {
+    background-image: url('svg/whatsapp.svg');
+}
+
+.phone {
+    background-image: url('svg/phone.svg');
+}
+
+.email {
+    background-image: url('svg/email.svg');
 }
