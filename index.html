@@ -12,6 +12,30 @@
             background-attachment: fixed;
             background-size: cover;
         }
+
+
+        .nav-stripe {
+            display: flex;
+            align-items: center;
+        }
+
+        .px-base {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+
+        .service-chip {
+            margin-right: 0.9rem;
+            margin-bottom: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            color: rgb(120 113 108);
+            border: 4px solid rgb(120 113 108);
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:767px) {}
     </style>
 </head>
 
@@ -34,16 +58,18 @@
         </div>
 
         <section class="w-full" style="display:flex; flex-direction:column; align-items:center; height:100%; ">
-            <img id="splash-logo" src="assets/logo.png" style="margin-bottom:2rem"/>
+            <img id="splash-logo" src="assets/logo.png" style="margin-bottom:2rem" />
             <a href="index.html" id="splash-title" class="text-center">WAYMAKER SERVICES <br /> SDN. BHD.</a>
         </section>
     </header>
 
     <section class="h-screen px-base bg-stone-200 text-stone-500">
         <article style="padding-top:4rem">
-            <h1 class="switzer-xthin-italic text-center" style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
+            <h1 class="switzer-xthin-italic text-center"
+                style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
 
-            <ul class="flex text-xl font-bold" style="justify-content:center; flex-wrap:wrap; width:75%; margin-left:auto; margin-right:auto">
+            <ul class="flex text-xl font-bold"
+                style="justify-content:center; flex-wrap:wrap; width:75%; margin-left:auto; margin-right:auto">
                 <li class="service-chip" id="service1"> Outsourced Accounting Service </li>
                 <li class="service-chip" id="service2"> Tax Consultation &amp; Planning </li>
                 <li class="service-chip" id="service3"> Company Secretarial Service </li>
@@ -53,8 +79,12 @@
             </ul>
 
             <div class="nav-stripe text-slate-600" style="justify-content:center; margin-top:2.5rem">
-                <a class="switzer-black animate-line animate-line-black" style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="services.html">Discover More</a>
-                <a class="switzer-black animate-line animate-line-black" style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="contacts.html">Contact Us</a>
+                <a class="switzer-black animate-line animate-line-black"
+                    style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="services.html">Discover
+                    More</a>
+                <a class="switzer-black animate-line animate-line-black"
+                    style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="contacts.html">Contact
+                    Us</a>
             </div>
         </article>
     </section>
@@ -63,10 +93,13 @@
         <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
             <h3 id="banner-promote" class="switzer-xthin-italic center-x text-center mb-6 text-6xl" style="width:75%;">
                 <div id="t1" class="flash" style="width:100%;"> Empowering Accounting Needs </div>
-                <div id="t2" class="flash" style="width:100%; display:none"> Unlock Efficient Business Success Through Outsourced Accounting </div>
-                <div id="t3" class="flash" style="width:100%; display:none"> Maximise Financial Management Through Our Tax Consultancy </div>
+                <div id="t2" class="flash" style="width:100%; display:none"> Unlock Efficient Business Success Through
+                    Outsourced Accounting </div>
+                <div id="t3" class="flash" style="width:100%; display:none"> Maximise Financial Management Through Our
+                    Tax Consultancy </div>
             </h3>
-            <p class="switzer-xthin center-x text-center text-2xl" style="width:75%; font-size:2.0rem; padding-top:2rem">
+            <p class="switzer-xthin center-x text-center text-2xl"
+                style="width:75%; font-size:2.0rem; padding-top:2rem">
                 With years of experience, we have a
                 solid proven track record for delivering
                 exceptional outsourced accounting services.
@@ -92,9 +125,11 @@
 
             <div id="reasonPic1" class="basis-1/2 bg-img blink save-time" style="margin-top:4.5rem;"></div>
             <div id="reasonPic2" class="basis-1/2 bg-img blink save-cost" style="margin-top:4.5rem; display:none"></div>
-            <div id="reasonPic3" class="basis-1/2 bg-img blink consultancy" style="margin-top:4.5rem; display:none"></div>
+            <div id="reasonPic3" class="basis-1/2 bg-img blink consultancy" style="margin-top:4.5rem; display:none">
+            </div>
             <div id="reasonPic4" class="basis-1/2 bg-img blink automate" style="margin-top:4.5rem; display:none"></div>
-            <div id="reasonPic5" class="basis-1/2 bg-img blink scale-account" style="margin-top:4.5rem; display:none"></div>
+            <div id="reasonPic5" class="basis-1/2 bg-img blink scale-account" style="margin-top:4.5rem; display:none">
+            </div>
 
             <div class="basis-1/2" style="margin-top:4.5rem; margin-bottom:4.5rem">
 
@@ -104,49 +139,31 @@
 
                 <ul id="reason-list" class="" style="margin:-2rem">
                     <li target="reasonPic1" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
-                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        <span class="bg-img icon-bottom"
+                            style="background-image: url(assets/icons/chevron-right.svg);"></span>
                         Save Time
                     </li>
                     <li target="reasonPic2" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
-                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        <span class="bg-img icon-bottom"
+                            style="background-image: url(assets/icons/chevron-right.svg);"></span>
                         Cost Cutting
                     </li>
                     <li target="reasonPic3" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
-                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        <span class="bg-img icon-bottom"
+                            style="background-image: url(assets/icons/chevron-right.svg);"></span>
                         Dedicated Accountancy &amp; Tax Advisor
                     </li>
                     <li target="reasonPic4" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
-                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        <span class="bg-img icon-bottom"
+                            style="background-image: url(assets/icons/chevron-right.svg);"></span>
                         Maximise Automation Technologies
                     </li>
                     <li target="reasonPic5" class="nav-stripe" style="align-items:center; column-gap: 1rem;">
-                        <span class="bg-img icon-bottom" style="background-image: url(assets/icons/chevron-right.svg);"></span>
+                        <span class="bg-img icon-bottom"
+                            style="background-image: url(assets/icons/chevron-right.svg);"></span>
                         Scale Accounting with Ease
                     </li>
                 </ul>
-
-                <script>
-                    const targets = {
-                        reasonPic1: document.getElementById("reasonPic1"),
-                        reasonPic2: document.getElementById("reasonPic2"),
-                        reasonPic3: document.getElementById("reasonPic3"),
-                        reasonPic4: document.getElementById("reasonPic4"),
-                        reasonPic5: document.getElementById("reasonPic5")
-                    }
-                    document.getElementById("reason-list").onmouseover = (e) => {
-                        const s = e.target;
-                        const attr = s.getAttribute("target")
-                        if(!attr) return;
-
-                        for(key in targets) {
-                            targets[key].style.display = "none";
-                        }
-
-                        const target = targets[attr]
-                        target.style.display = "block";
-                    }
-
-                </script>
             </div>
         </article>
     </section>
@@ -211,6 +228,26 @@
     </footer>
 
     <script>
+        const targets = {
+            reasonPic1: document.getElementById("reasonPic1"),
+            reasonPic2: document.getElementById("reasonPic2"),
+            reasonPic3: document.getElementById("reasonPic3"),
+            reasonPic4: document.getElementById("reasonPic4"),
+            reasonPic5: document.getElementById("reasonPic5")
+        }
+        document.getElementById("reason-list").onmouseover = (e) => {
+            const s = e.target;
+            const attr = s.getAttribute("target")
+            if (!attr) return;
+
+            for (key in targets) {
+                targets[key].style.display = "none";
+            }
+
+            const target = targets[attr]
+            target.style.display = "block";
+        }
+
         const toggleClass = (el, condition, className) => {
             if (condition) {
                 el.classList.add(className);
@@ -219,6 +256,7 @@
             }
         }
 
+        // section 
         const headerFat = document.getElementById("header-fat");
         const headerSlim = document.getElementById("header-slim");
         const splashLogo = document.getElementById("splash-logo");
