@@ -134,63 +134,62 @@
         </article>
     </section>
 
-    <footer class="fixed bottom-0 -z-10 w-full px-base" style="background-color: var(--my-blue-bg-darker)">
-        <div class="nav-stripe" style="justify-content: space-between">
-            <div id="nav-bottom-left">
-                <a class="text-slate-100 animate-line" href="conditions.html">Terms &amp; Conditions</a>
-                <p class="text-slate-300">
-                    Waymaker Services Sdn. Bhd. (Reg. 202001038666, 1394987-K) <br />
-                    All rights reserved. &#169; 2023-2024.
-                </p>
-            </div>
-
-            <nav id="nav-bottom-right" class="text-slate-200" style="display: flex; column-gap: 3rem">
+    <footer>
+        <div class="nav-bottom">
+            <nav class="link-blocks" class="text-slate-200">
                 <ul>
-                    <li><a class="nav-stripe-icon" href="company.html">Company</a></li>
-                    <li><a class="nav-stripe-icon" href="services.html">Services</a></li>
+                    <li><a class="hvr-stripe" href="company.html">Company</a></li>
+                    <li><a class="hvr-stripe" href="services.html">Services</a></li>
+                    <li><a class="hvr-stripe" href="conditions.html">Terms &amp; Conditions</a></li>
                 </ul>
 
-                <ul>
-                    <li>
-                        <a class="nav-stripe-icon"
+                <ul class="nav-mobile">
+                    <li class="hvr-stripe">
+                        <a
                             href="https://wa.me/60182216019?text=I'm%20reaching%20out%20the%20first%20time%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20am%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.">
-                            Whatsapp
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/whatsapp.svg)">
-                            </div>
+                            <span>Whatsapp</span>
+                            <div class="bg-img align-icon whatsapp-icon"></div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon" href="tel:+60182216019">
-                            Phone
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/phone.svg)"></div>
+                        <a class="hvr-stripe" href="tel:+60182216019">
+                            <span>Phone</span>
+                            <div class="bg-img align-icon phone-icon"></div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon"
+                        <a class="hvr-stripe"
                             href="mailto:account@wmaker.com.my?subject=Initial%20Contact&body=Im%20reaching%20out%20to%20understand%20more%20on%20services%20your%20respective%20company%20offers.%20In%20particular,%20I%20interested%20in%20ACCOUNT/%20TAX/%20AUDIT/%20INSURANCE.%20I%20can%20be%20reached%20at%20...">
-                            Email
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/email.svg)"></div>
+                            <span>Email</span>
+                            <div class="bg-img align-icon email-icon"></div>
                         </a>
                     </li>
                 </ul>
 
                 <ul>
                     <li>
-                        <a class="nav-stripe-icon" href="https://maps.app.goo.gl/YtKvGwJ75gYz5fJc6" target="_blank">
-                            Google Map
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/google-map.svg)">
-                            </div>
+                        <a class="hvr-stripe" href="https://maps.app.goo.gl/YtKvGwJ75gYz5fJc6" target="_blank">
+                            <span class="text-nowrap">Google Map</span>
+                            <div class="bg-img align-icon googlemap-icon"></div>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-stripe-icon"
-                            href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17" target="_blank">
+                        <a class="hvr-stripe" href="https://www.waze.com/ul?ll=3.009424,101.714462&navigate=yes&zoom=17"
+                            target="_blank">
                             Waze
-                            <div class="bg-img icon-bottom" style="background-image: url(assets/icons/waze.svg)"></div>
+                            <div class="bg-img align-icon waze-icon"></div>
                         </a>
                     </li>
                 </ul>
             </nav>
+
+            <div class="copy-right">
+                <p>
+                    <span>Waymaker Services Sdn. Bhd.</span>
+                    <span>(Reg. 202001038666, 1394987-K)</span>
+                    <span>All rights reserved. &#169; 2023-<span id="year-placeholder">2024</span></span>
+                </p>
+            </div>
         </div>
     </footer>
 </body>

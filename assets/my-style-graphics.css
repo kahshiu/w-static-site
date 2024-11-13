@@ -1,0 +1,82 @@
+.office-pic {
+    background-image: url('waymaker-office-md.jpeg');
+}
+
+/***********************/
+/** HOMEPAGE: REASONS **/
+/***********************/
+.reason-default {
+    background-image: url('img-reasons/save-time.webp');
+}
+
+.save-time {
+    background-image: url('img-reasons/save-time.webp');
+}
+
+.save-cost {
+    background-image: url('img-reasons/save-cost.webp');
+}
+
+.consultancy {
+    background-image: url('img-reasons/consultancy.webp');
+}
+
+.automate {
+    background-image: url('img-reasons/automate.webp');
+}
+
+.scale-account {
+    background-image: url('img-reasons/scaling-account.webp');
+}
+
+/**********/
+/** LOGO **/
+/**********/
+.facebook-logo {
+    background-image: url('icons-old/facebook.png');
+}
+
+.googlemap-logo {
+    background-image: url('icons-old/googlemap.png');
+}
+
+.waze-logo {
+    background-image: url('icons-old/waze.png');
+}
+
+.whatsapp-platinum {
+    background-image: url('icons-old/whatsapp-platinum.png');
+}
+
+.whatsapp-qr {
+    background-image: url('icons-old/qrcode-wa.png');
+}
+
+
+/***********/
+/** ICONS **/
+/***********/
+
+.email-icon {
+    background-image: url('icons/email.svg');
+}
+
+.googlemap-icon {
+    background-image: url('icons/google-map.svg');
+}
+
+.hamburger-icon {
+    background-image: url('icons/hamburger.svg');
+}
+
+.phone-icon {
+    background-image: url('icons/phone.svg');
+}
+
+.waze-icon {
+    background-image: url('icons/waze.svg');
+}
+
+.whatsapp-icon {
+    background-image: url('icons/whatsapp.svg');
+}

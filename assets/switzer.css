@@ -22,91 +22,135 @@
 @font-face {
   font-family: 'Switzer-Thin';
   src: url('fonts/Switzer-Thin.woff2') format('woff2'),
-       url('fonts/Switzer-Thin.woff') format('woff'),
-       url('fonts/Switzer-Thin.ttf') format('truetype');
+    url('fonts/Switzer-Thin.woff') format('woff'),
+    url('fonts/Switzer-Thin.ttf') format('truetype');
   font-weight: 100;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Switzer-ThinItalic';
   src: url('fonts/Switzer-ThinItalic.woff2') format('woff2'),
-       url('fonts/Switzer-ThinItalic.woff') format('woff'),
-       url('fonts/Switzer-ThinItalic.ttf') format('truetype');
+    url('fonts/Switzer-ThinItalic.woff') format('woff'),
+    url('fonts/Switzer-ThinItalic.ttf') format('truetype');
   font-weight: 100;
   font-display: swap;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Switzer-Extralight';
   src: url('fonts/Switzer-Extralight.woff2') format('woff2'),
-       url('fonts/Switzer-Extralight.woff') format('woff'),
-       url('fonts/Switzer-Extralight.ttf') format('truetype');
+    url('fonts/Switzer-Extralight.woff') format('woff'),
+    url('fonts/Switzer-Extralight.ttf') format('truetype');
   font-weight: 200;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Switzer-ExtralightItalic';
   src: url('fonts/Switzer-ExtralightItalic.woff2') format('woff2'),
-       url('fonts/Switzer-ExtralightItalic.woff') format('woff'),
-       url('fonts/Switzer-ExtralightItalic.ttf') format('truetype');
+    url('fonts/Switzer-ExtralightItalic.woff') format('woff'),
+    url('fonts/Switzer-ExtralightItalic.ttf') format('truetype');
   font-weight: 200;
   font-display: swap;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Switzer-Regular';
   src: url('fonts/Switzer-Regular.woff2') format('woff2'),
-       url('fonts/Switzer-Regular.woff') format('woff'),
-       url('fonts/Switzer-Regular.ttf') format('truetype');
+    url('fonts/Switzer-Regular.woff') format('woff'),
+    url('fonts/Switzer-Regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Switzer-Italic';
   src: url('fonts/Switzer-Italic.woff2') format('woff2'),
-       url('fonts/Switzer-Italic.woff') format('woff'),
-       url('fonts/Switzer-Italic.ttf') format('truetype');
+    url('fonts/Switzer-Italic.woff') format('woff'),
+    url('fonts/Switzer-Italic.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Switzer-Bold';
   src: url('fonts/Switzer-Bold.woff2') format('woff2'),
-       url('fonts/Switzer-Bold.woff') format('woff'),
-       url('fonts/Switzer-Bold.ttf') format('truetype');
+    url('fonts/Switzer-Bold.woff') format('woff'),
+    url('fonts/Switzer-Bold.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Switzer-BoldItalic';
   src: url('fonts/Switzer-BoldItalic.woff2') format('woff2'),
-       url('fonts/Switzer-BoldItalic.woff') format('woff'),
-       url('fonts/Switzer-BoldItalic.ttf') format('truetype');
+    url('fonts/Switzer-BoldItalic.woff') format('woff'),
+    url('fonts/Switzer-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-display: swap;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'Switzer-Black';
   src: url('fonts/Switzer-Black.woff2') format('woff2'),
-       url('fonts/Switzer-Black.woff') format('woff'),
-       url('fonts/Switzer-Black.ttf') format('truetype');
+    url('fonts/Switzer-Black.woff') format('woff'),
+    url('fonts/Switzer-Black.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Switzer-BlackItalic';
   src: url('fonts/Switzer-BlackItalic.woff2') format('woff2'),
-       url('fonts/Switzer-BlackItalic.woff') format('woff'),
-       url('fonts/Switzer-BlackItalic.ttf') format('truetype');
+    url('fonts/Switzer-BlackItalic.woff') format('woff'),
+    url('fonts/Switzer-BlackItalic.ttf') format('truetype');
   font-weight: 900;
   font-display: swap;
   font-style: italic;
 }
 
+.switzer-bold {
+  font-family: 'Switzer-Black', Arial, sans-serif;
+}
+
+.switzer-black {
+  font-family: 'Switzer-Black', Arial, sans-serif;
+}
+
+.switzer-black-italic {
+  font-family: 'Switzer-Black-Italic', Arial, sans-serif;
+}
+
+.switzer-thin {
+  font-family: 'Switzer-Regular', Arial, sans-serif;
+}
+
+.switzer-thin-italic {
+  font-family: 'Switzer-Italic', Arial, sans-serif;
+}
+
+.switzer-thin-bold {
+  font-family: 'Switzer-Bold', Arial, sans-serif;
+}
+
+.switzer-thin-bold-italic {
+  font-family: 'Switzer-BoldItalic', Arial, sans-serif;
+}
+
+.switzer-xthin {
+  font-family: 'Switzer-Extralight', Arial, sans-serif;
+}
+
+.switzer-xthin-italic {
+  font-family: 'Switzer-ExtralightItalic', Arial, sans-serif;
+}

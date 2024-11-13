@@ -1,0 +1,42 @@
+/*****************/
+/** text colour **/
+/*****************/
+
+:root {
+    --my-blue: #4a90e2;
+    --my-blue-bg: rgb(27, 64, 136); /* #1b3f88 */
+    --my-blue-bg-darker: #0a2f63;
+
+    --my-gray: #f5f5f5;
+    --my-green: #009688;
+    --my-orange: hsl(45 100% 70%);
+
+    --my-slate-100: rgb(241 245 249);
+    --my-slate-200: rgb(226 232 240);
+    --my-slate-300: rgb(203 213 225);
+    --my-slate-400: rgb(148 163 184);
+    --my-slate-500: rgb(100 116 139); 
+    --my-slate-600: rgb(71 85 105);
+
+    --my-sm-w: 480px;
+    --my-md-w: 768px;
+    --my-lg-w: 1024px;
+    --my-xl-w: 1280px;
+    --my-2xl-w: 1536px;
+
+    --my-base-px: 3rem;
+    --my-space-03: 0.3rem;
+    --my-space-06: 0.6rem;
+    --my-space-09: 0.9rem;
+    --my-space: 1.0rem;
+    --my-space-13: 1.3rem;
+    --my-space-16: 1.6rem;
+    --my-space-19: 1.9rem;
+    --my-space-23: 2.3rem;
+    --my-space-26: 2.6rem;
+    --my-space-29: 2.9rem;
+    --my-space-40: 4rem;
+
+    --my-font-size: 1rem;
+}
+
