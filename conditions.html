@@ -15,6 +15,12 @@
             text-align: center;
         }
 
+        article {
+            width: 75%;
+            text-align: justify;
+            padding-bottom: var(--my-space-13)
+        }
+
         .list li {
             padding-left: 0.9rem;
         }
@@ -48,13 +54,26 @@
         }
 
         .my-text .i1 {
-            font-family: 'Boska-BoldItalic', 'Times New Roman', Times, serif;
             font-size: 1.2rem;
         }
 
         .my-text .i2 {
-            font-family: 'Boska-Bold', 'Times New Roman', Times, serif;
             font-size: 1.6rem;
+        }
+
+        /*@media only screen and (max-width:479px) {*/
+        @media only screen and (max-width:550px) {
+            article {
+                width: 100%;
+            }
+
+            .title {
+                font-size: var(--my-space-23);
+            }
+
+            .my-text {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -73,12 +92,12 @@
         </ul>
     </nav>
 
-    <section class="content pb-12 mb-48 switzer-regular bg-sky-50" style="text-align: justify;">
+    <section class="content switzer-regular bg-sky-50">
         <h1 class="switzer-thin-italic title">Terms &amp; Conditions</h1>
-        <article class="my-text center-x" style="width:75%">
+        <article class="my-text center-x">
             <p>
                 This privacy statement represents the privacy policy applicable to all legal entities owned by
-                <b>Waymaker Services Sdn. Bhd.</b>.
+                <b>Waymaker Services Sdn. Bhd.</b>
                 In the event of any changes to this privacy statement for the betterment of our services, we will post
                 such changes here. Please read and understand this privacy statement before providing your information
                 to us or using our services.
@@ -121,13 +140,12 @@
                         </li>
                         <li>
                             <b>When you visit our website</b>
-                            <p>
-                                When you visit <b></b>Waymaker Services Sdn. Bhd.</p> website, we collect data through
-                            cookies to track the activity on our website. The data we collect through cookies consists
-                            of data relating to your device, IP address and your usage of the websites. We use the data
-                            collected through cookies to provide you with the best user experience and for improving
-                            the websites' content by tracking usage patterns and recording preferences and
-                            for allowing you to log on to specific sites.
+                            <p> When you visit <b>Waymaker Services Sdn. Bhd.</b> website, we collect data through
+                                cookies to track the activity on our website. The data we collect through cookies
+                                consists of data relating to your device, IP address and your usage of the websites. We
+                                use the data collected through cookies to provide you with the best user experience and
+                                for improving the websites' content by tracking usage patterns and recording preferences
+                                and for allowing you to log on to specific sites.
                             </p>
                         </li>
                         <li>

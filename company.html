@@ -19,8 +19,12 @@
 
         .title {
             color: var(--my-slate-500);
-            font-size: var(--my-space-40);
+            font-size: var(--my-space-30);
             text-align: center;
+        }
+
+        .title-mobile {
+            display: none;
         }
 
         article {
@@ -48,7 +52,7 @@
 
         article div.text h3 {
             margin-bottom: var(--my-space-09);
-            font-size: 2rem;
+            font-size: var(--my-space-19);
             color: var(--my-slate-500);
             text-transform: uppercase;
         }
@@ -70,6 +74,32 @@
                 text-align: center;
             }
         }
+
+        @media only screen and (max-width:479px) {
+            .content {
+                padding: var(--my-space-19) var(--my-space-13) 0rem var(--my-space-13);
+            }
+
+            .title {
+                font-size: var(--my-space-23);
+            }
+
+            .title-regular {
+                display: none;
+            }
+
+            .title-mobile {
+                display: block;
+            }
+
+            article div.text p {
+                text-align: left;
+            }
+
+            article div.text h3 {
+                font-size: var(--my-space-13);
+            }
+        }
     </style>
 </head>
 
@@ -88,9 +118,14 @@
     </nav>
 
     <section class="content">
-        <h2 class="switzer-thin-italic title" style="font-size:3rem; margin-bottom:2.4rem">
-            Why Waymaker Services <br />
-            for Your Financial Services?
+        <h2 class="switzer-thin-italic title" style="margin-bottom:2.4rem">
+            <span class="title-regular">
+                Why Waymaker <br />
+                for Your Financial Services?
+            </span>
+            <span class="title-mobile">
+                Why Waymaker?
+            </span>
         </h2>
 
         <article>
@@ -146,13 +181,11 @@
             <div class="text">
                 <h3 class="switzer-thin-italic"> Auditing Services Expert </h3>
                 <p>
-                    Auditing Services for Your Business Auditing is another core service offered by Waymaker Services
-                    Sdn. Bhd.
+                    Auditing is another core service offered by Waymaker Services Sdn. Bhd.
                     Our company's experienced auditors provide a range of auditing services, including financial
                     statement audits, compliance audits, and operational audits. Our team works closely with clients
                     to understand their unique business needs and develop tailored audit plans that provide meaningful
-                    insights
-                    into their business operations.
+                    insights into their business operations.
                 </p>
                 <p>
                     Waymaker Services Sdn. Bhd. auditing services are designed to help clients identify areas of risk

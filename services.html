@@ -66,9 +66,15 @@
             text-align: center;
         }
 
-        @media only screen and (max-width:767px) { 
+        @media only screen and (max-width:767px) {
             .service-card-container {
                 flex-direction: column;
+            }
+        }
+
+        @media only screen and (max-width:479px) {
+            .title {
+                font-size: var(--my-space-23);
             }
         }
     </style>
@@ -125,7 +131,8 @@
             </article>
 
             <article class="service-card" style="background-image:url(assets/img-services/analysis2.webp);">
-                <div class="switzer-regular"> Affordable Personal Insurance Planning, Consultation &amp; Solutions </div>
+                <div class="switzer-regular"> Affordable Personal Insurance Planning, Consultation &amp; Solutions
+                </div>
             </article>
 
             <article class="service-card" style="background-image:url(assets/img-services/planning_corp.webp);">
