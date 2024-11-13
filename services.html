@@ -4,11 +4,77 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/my-style.css" />
+    <script src="assets/tailwindcss-3.4.14.js"></script>
+    <script src="assets/my-script.js"></script>
+    <link href="assets/my-style.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: var(--my-slate-100);
+        }
+
+        .content {
+            background-color: var(--my-slate-100);
+            padding-bottom: var(--my-space-13);
+        }
+
+        .service-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .title {
+            color: var(--my-slate-500);
+            font-size: var(--my-space-40);
+            text-align: center;
+        }
+
+        .service-card {
+            position: relative;
+            flex-basis: 18rem;
+            box-sizing: border-box;
+            min-width: 15rem;
+
+            height: 20rem;
+            margin: var(--my-space-13);
+            background-image: url(assets/img-services/payroll.webp);
+            background-size: cover;
+            background-position: 75% 25%;
+            transform: translateY(0rem);
+            box-shadow: 0rem 0.3rem 0.9rem 0.1rem var(--my-slate-300);
+            transition: all 0.1s linear;
+        }
+
+        .service-card:hover {
+            transform: translateY(-1.3rem);
+            box-shadow: 0rem 0.3rem 0.9rem 0.2rem var(--my-slate-400);
+        }
+
+        .service-card div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            bottom: 0rem;
+            width: 100%;
+            height: 5rem;
+            padding: var(--my-space-03) var(--my-space-06);
+            background-color: white;
+            text-align: center;
+        }
+
+        @media only screen and (max-width:767px) { 
+            .service-card-container {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
-<body class="font-sans bg-sky-50">
+<body class="font-sans">
     <nav class="nav-top">
         <div class="nav-top-left">
             <div class="nav-top-logo" style="width:2.6rem; height:2.6rem;"></div>
@@ -22,174 +88,52 @@
         </ul>
     </nav>
 
-    <!---
-    <div class="container">
-        <div class="card">
-            <h3 class="title">Card 1</h3>
-            <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="stroke" cx="60" cy="60" r="50" />
-                </svg>
-            </div>
-        </div>
-        <div class="card">
-            <h3 class="title">Card 2</h3>
-            <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="stroke" cx="60" cy="60" r="50" />
-                </svg>
-            </div>
-        </div>
-        <div class="card">
-            <h3 class="title">Card 3</h3>
-            <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="stroke" cx="60" cy="60" r="50" />
-                </svg>
-            </div>
-        </div>
-        <div class="card">
-            <h3 class="title">Card 4</h3>
-            <div class="bar">
-                <div class="emptybar"></div>
-                <div class="filledbar"></div>
-            </div>
-            <div class="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="stroke" cx="60" cy="60" r="50" />
-                </svg>
-            </div>
-        </div>
-    </div>
-    -->
+    <section class="content">
+        <h1 class="switzer-xthin-italic title">Services</h1>
 
-    <section class="content mb-56 px-16 py-8 bg-sky-50">
-        <h1 class="switzer-xthin-italic text-slate-500 text-center" style="font-size: 4rem">Services</h1>
-        <style>
-            .service-card-container {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .service-card {
-                position: relative;
-                flex-basis: 25%;
-                box-sizing: border-box;
-                height: 20rem;
-                margin: 1.5rem;
-                background-image: url(assets/img-services/payroll.webp);
-                background-size: cover;
-                background-position: 75% 25%;
-            }
-
-            .service-card .description {
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
-                height: 5rem;
-                padding: 0.3rem 0.6rem;
-                border-style: solid;
-                border-color: rgb(203 213 225);
-                border-width: 0px 3px 3px 3px;
-                background-color: white;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-        </style>
-
-        <div class="service-card-container w-full">
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/accounting.webp);">
-                <div class="description switzer-regular">
-                    <span> Comprehensive Accounting Services </span>
-                </div>
+        <div class="service-card-container">
+            <article class="service-card" style="background-image:url(assets/img-services/accounting.webp);">
+                <div class="switzer-regular"> Comprehensive Accounting Services </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all">
-                <div class="description switzer-regular">
-                    <span>Payroll Management</span>
-                </div>
+            <article class="service-card">
+                <div class="switzer-regular"> Payroll Management </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/tax_planning.webp);">
-                <div class="description switzer-regular">
-                    <span> Tax Planning &amp; Consultation </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/tax_planning.webp);">
+                <div class="switzer-regular"> Tax Planning &amp; Consultation </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/tax.webp);">
-                <div class="description switzer-regular">
-                    <span> GST & SST Consultation Services </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/tax.webp);">
+                <div class="switzer-regular"> GST & SST Consultation Services </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/secretarial.webp);">
-                <div class="description switzer-regular">
-                    <span> Company Secretarial Services </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/secretarial.webp);">
+                <div class="switzer-regular"> Company Secretarial Services </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/reg_com.webp);">
-                <div class="description switzer-regular">
-                    <span> Company Registration </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/reg_com.webp);">
+                <div class="switzer-regular"> Company Registration </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/planning.webp);">
-                <div class="description switzer-regular">
-                    <span> Strategic Growth Consultation &amp; Company Management Services </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/planning.webp);">
+                <div class="switzer-regular"> Strategic Growth Consultation &amp; Company Management Services </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/estate-planning.webp);">
-                <div class="description switzer-regular">
-                    <span> Wills and Estate Planning </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/estate-planning.webp);">
+                <div class="switzer-regular"> Wills and Estate Planning </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/analysis2.webp);">
-                <div class="description switzer-regular">
-                    <span> Affordable Personal Insurance Planning, Consultation &amp; Solutions </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/analysis2.webp);">
+                <div class="switzer-regular"> Affordable Personal Insurance Planning, Consultation &amp; Solutions </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/planning_corp.webp);">
-                <div class="description switzer-regular">
-                    <span> Corporate Insurance Planning Services </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/planning_corp.webp);">
+                <div class="switzer-regular"> Corporate Insurance Planning Services </div>
             </article>
 
-            <article class="service-card translate-y-0 shadow-md hover:-translate-y-2 hover:shadow-2xl transition-all"
-                style="background-image:url(assets/img-services/insurance.webp);">
-                <div class="description switzer-regular">
-                    <span> General Insurance </span>
-                </div>
+            <article class="service-card" style="background-image:url(assets/img-services/insurance.webp);">
+                <div class="switzer-regular"> General Insurance </div>
             </article>
 
             <!---
