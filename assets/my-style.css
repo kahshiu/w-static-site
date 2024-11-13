@@ -55,6 +55,44 @@ REUSABLE
     font-size: 1.6rem;
 }
 
+.bg-img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.center-x {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-logo {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+}
+
+.service-chip {
+    margin-right: 0.9rem;
+    margin-bottom: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    color: rgb(120 113 108);
+    border: 4px solid rgb(120 113 108);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.align-icon {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    vertical-align: middle;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
 
 
 /**************/
@@ -112,24 +150,14 @@ REUSABLE
 /** header **/
 /************/
 .nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: var(--my-space-09) var(--my-base-px);
     background-color: var(--my-blue-bg);
     color: var(--my-slate-100);
-}
-
-.nav-top-logo {
-    background-image: url('logo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.1) invert(1);
-}
-
-.nav-top-hamburger {
-    background-image: url('svg/hamburger.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.1) invert(1);
 }
 
 .nav-top-left {
@@ -141,54 +169,30 @@ REUSABLE
     display: flex;
     justify-content: space-around;
     column-gap: 3rem;
+    margin-top: var(--my-space-13);
     font-size: 20px;
 }
 
-.bg-img {
+.nav-top-title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.nav-top-logo {
+    background-image: url('logo.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.center-x {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.location-logo {
-    display: inline-block;
-    width: 4rem;
-    height: 4rem;
-}
-
-.service-chip {
-    margin-right: 0.9rem;
-    margin-bottom: 0.9rem;
-    padding: 0.6rem 1.2rem;
-    color: rgb(120 113 108);
-    border: 4px solid rgb(120 113 108);
-    border-radius: 50px;
-    text-align: center;
-}
-
-.align-icon {
-    display: inline-block;
-    width: 1.3rem;
-    height: 1.3rem;
-    vertical-align: middle;
-}
-
-.text-nowrap {
-    white-space: nowrap;
+    filter: brightness(0.1) invert(1);
 }
 
 /************/
 /** body **/
 /************/
 .content {
-    margin-top: 2rem;
-    margin-bottom: 9rem; 
-    padding: 0rem var(--my-base-px);
+    margin-bottom: 9rem;
+    padding: var(--my-space-19) var(--my-base-px) 0rem var(--my-base-px);
     background-color: white;
 }
 
@@ -291,14 +295,52 @@ footer {
 }
 
 @media only screen and (max-width:479px) {
+    .nav-top {
+        padding: var(--my-space-09) var(--my-space-09);
+    }
+
+    .nav-top-logo {
+        background-image: url('icons/hamburger.svg');
+    }
+
+    .nav-top-right {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-top-right li {
+        padding: var(--my-space-09) var(--my-space-09);
+        font-size: var(--my-space-19);
+    }
+
+    .nav-top-right li:first-child {
+        padding-top: var(--my-space-06);
+    }
+    
+    .nav-top-right li:last-child {
+        padding-bottom: var(--my-space-03);
+    }
+
+    .nav-top:hover .nav-top-right{
+        display: block;
+    }
+
     .content {
         margin-bottom: 9rem;
+    }
+    
+    footer {
+        padding: var(--my-space-09) var(--my-space-09);
     }
 
     .nav-bottom .link-blocks ul:not(.nav-mobile),
     .nav-bottom .link-blocks ul.nav-mobile a span,
     .nav-bottom .copy-right {
         display: none;
+    }
+
+    .nav-bottom .link-blocks {
+        margin-bottom: 0rem;
     }
 
     .nav-mobile {
@@ -309,8 +351,8 @@ footer {
     }
 
     .nav-mobile li a div {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         filter: brightness(0) invert(1);
         background-size: contain;
     }
