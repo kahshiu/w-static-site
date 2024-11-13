@@ -2,40 +2,73 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/my-style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/tailwindcss-3.4.14.js"></script>
+    <script src="assets/my-script.js"></script>
+    <link href="assets/my-style.css" rel="stylesheet" />
     <style>
-        .box {
-            display: flex;
-            flex-direction: row;
+        body {
+            background-color: var(--my-slate-200);
         }
-        .x article {
-            background-color: var(--my-gray);
-            margin-bottom: 2.4rem;
-            padding: 1.2rem 2.4rem;
+
+        .content {
+            background-color: var(--my-slate-200);
+            padding-bottom: var(--my-space-19);
+        }
+
+        .title {
+            color: var(--my-slate-500);
+            font-size: var(--my-space-40);
+            text-align: center;
+        }
+
+        article {
+            display: flex;
             align-items: stretch;
             column-gap: 2.4rem;
+
+            margin-bottom: 2.4rem;
+            padding: var(--my-space-13);
+            background-color: var(--my-gray);
         }
 
-        .x article div.img { 
+        article div.image {
             width: 40%;
+            background-repeat: no-repeat;
         }
 
-        .x article div.content { 
+        article div.text {
             width: 60%;
         }
-        .x article div.content p { 
+
+        article div.text p {
             text-align: justify;
         }
 
-        .x article div.content h3 { 
-            margin-bottom: 0.6rem;
+        article div.text h3 {
+            margin-bottom: var(--my-space-09);
+            font-size: 2rem;
+            color: var(--my-slate-500);
+            text-transform: uppercase;
         }
 
-        .x article div.content p { 
-            margin-bottom: 0.6rem;
+        article div.text p {
+            margin-bottom: var(--my-space-09);
+        }
+
+        @media only screen and (max-width:767px) {
+            article div.image {
+                display: none;
+            }
+
+            article div.text {
+                width: 100%;
+            }
+
+            article div.text h3 {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -54,17 +87,16 @@
         </ul>
     </nav>
 
-    <section class="x mt-8 mb-52 px-base bg-white">
-        <h2 class="text-slate-600 text-center switzer-thin-italic" style="font-size:3rem; margin-bottom: 2.4rem">
+    <section class="content">
+        <h2 class="switzer-thin-italic title" style="font-size:3rem; margin-bottom:2.4rem">
             Why Waymaker Services <br />
             for Your Financial Services?
         </h2>
-        <article class="nav-stripe" style="">
-            <div class="img" style="background-image:url('assets/img-company/analysis.webp');"></div>
-            <div class="content" style="justify-content:flex-start">
-                <h3 class="text-slate-500 switzer-thin-italic uppercase" style="font-size:2rem">
-                    Trusted Partner In Accounting Solutions
-                </h3>
+
+        <article>
+            <div class="image" style="background-image:url('assets/img-company/analysis.webp');"></div>
+            <div class="text">
+                <h3 class="switzer-thin-italic"> Trusted Partner In Accounting Solutions </h3>
                 <p>
                     Waymaker Services Sdn. Bhd. is a leading provider of outsourced accounting
                     services based in Seri Kembangan, Selangor, Malaysia.
@@ -86,12 +118,11 @@
             </div>
         </article>
 
-        <article class="nav-stripe" style="">
-            <div class="img" style="order:10; background-image:url('assets/img-company/analysis3.webp');"></div>
-            <div class="content">
-                <h3 class="text-slate-500 switzer-thin-italic uppercase" style="font-size:2rem">
-                    Strategise Your Financial Future with Our Tax Planning &amp; Consultation
-                </h3>
+        <article>
+            <div class="image" style="order:10; background-image:url('assets/img-company/analysis3.webp');"></div>
+            <div class="text">
+                <h3 class="switzer-thin-italic"> Strategise Your Financial Future with Our Tax Planning &amp;
+                    Consultation </h3>
                 <p>
                     In addition to accounting services, Waymaker Services also offers tax planning services.
                     Our company's tax experts work closely with clients to develop tax strategies that minimize their
@@ -109,17 +140,18 @@
             </div>
         </article>
 
-        <article class="nav-stripe" style="">
-            <div class="img" style="background-image:url('assets/img-company/consultancy.webp'); background-size: cover;"></div>
-            <div class="content">
-                <h3 class="text-slate-500 switzer-thin-italic uppercase" style="font-size:2rem">
-                    Auditing Services Expert
-                </h3>
+        <article>
+            <div class="image"
+                style="background-image:url('assets/img-company/consultancy.webp'); background-size: cover;"></div>
+            <div class="text">
+                <h3 class="switzer-thin-italic"> Auditing Services Expert </h3>
                 <p>
-                    Auditing Services for Your Business Auditing is another core service offered by Waymaker Services Sdn. Bhd.
+                    Auditing Services for Your Business Auditing is another core service offered by Waymaker Services
+                    Sdn. Bhd.
                     Our company's experienced auditors provide a range of auditing services, including financial
-                    statement audits, compliance audits, and operational audits. Our team works closely with clients 
-                    to understand their unique business needs and develop tailored audit plans that provide meaningful insights 
+                    statement audits, compliance audits, and operational audits. Our team works closely with clients
+                    to understand their unique business needs and develop tailored audit plans that provide meaningful
+                    insights
                     into their business operations.
                 </p>
                 <p>
