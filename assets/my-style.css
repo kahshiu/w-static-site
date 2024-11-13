@@ -206,7 +206,7 @@ footer {
     z-index: -10;
     width: 100%;
     padding: var(--my-space-13) var(--my-base-px);
-    background-color: var(--my-blue-bg-darker);
+    background-color: var(--my-blue-bg);
 }
 
 .nav-bottom {
