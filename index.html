@@ -7,38 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/my-style.css" />
     <style>
-        .bg-slide1 {
-            background-image: url("assets/img-stock/banner-collab-hands.webp");
-            background-attachment: fixed;
-            background-size: cover;
+        body {
+            background-color: var(--my-slate-200);
         }
-
-
-        .nav-stripe {
-            display: flex;
-            align-items: center;
+        .title {
+            color: var(--my-slate-500);
+            font-size: var(--my-space-30);
         }
-
-        .px-base {
-            padding-left: 3rem;
-            padding-right: 3rem;
-        }
-
-        .service-chip {
-            margin-right: 0.9rem;
-            margin-bottom: 0.9rem;
-            padding: 0.6rem 1.2rem;
-            color: rgb(120 113 108);
-            border: 4px solid rgb(120 113 108);
-            border-radius: 50px;
-            text-align: center;
-        }
-
         @media only screen and (max-width:767px) {}
     </style>
 </head>
 
-<body class="font-sans bg-stone-200">
+<body class="font-sans">
     <header id="header-fat" class="nav-top text-slate-200">
         <nav id="header-slim" class="nav-top">
             <div class="nav-top-left">
@@ -59,67 +39,188 @@
         </section>
     </header>
 
-    <section class="h-screen px-base bg-stone-200 text-stone-500">
-        <article style="padding-top:4rem">
-            <h1 class="switzer-xthin-italic text-center"
-                style="font-size:4rem; margin-top:4.5rem; margin-bottom:4.5rem">Our Service</h1>
+    <style>
+        .service-section {
+            min-height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            background-color: var(--my-slate-200);
+            color: var(--my-slate-500);
+        }
 
-            <ul class="flex text-xl font-bold"
-                style="justify-content:center; flex-wrap:wrap; width:75%; margin-left:auto; margin-right:auto">
-                <li class="service-chip" id="service1"> Outsourced Accounting Service </li>
-                <li class="service-chip" id="service2"> Tax Consultation &amp; Planning </li>
-                <li class="service-chip" id="service3"> Company Secretarial Service </li>
-                <li class="service-chip" id="service4"> Outsourced Payroll Service </li>
-                <li class="service-chip" id="service5"> Business Strategic Growth Consultation </li>
-                <li class="service-chip" id="service6"> Insurance Planning &amp; Policy Engagement </li>
-            </ul>
+        .service-title {
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            font-size: 4rem;
+        }
 
-            <div class="nav-stripe text-slate-600" style="justify-content:center; margin-top:2.5rem">
-                <a class="switzer-black animate-line animate-line-black"
-                    style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="services.html">Discover
-                    More</a>
-                <a class="switzer-black animate-line animate-line-black"
-                    style="display:inline-block; font-size:2rem; margin-right:1.5rem" href="contacts.html">Contact
-                    Us</a>
-            </div>
-        </article>
-    </section>
+        .service-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+            font-size: var(--my-space-13);
+        }
 
-    <div class="flex h-screen bg-stone-200 text-stone-200 text-center bg-slide1">
-        <div class="my-auto w-full p-8" style="backdrop-filter: blur(15px) brightness(0.8)">
-            <h3 id="banner-promote" class="switzer-xthin-italic center-x text-center mb-6 text-6xl" style="width:75%;">
-                <div id="t1" class="flash" style="width:100%;"> Empowering Accounting Needs </div>
-                <div id="t2" class="flash" style="width:100%; display:none"> Unlock Efficient Business Success Through
+        .service-list li {
+            margin-right: 0.9rem;
+            margin-bottom: 0.9rem;
+            padding: 0.6rem 1.3rem;
+            border: 4px solid rgb(120 113 108);
+            border-radius: 50px;
+            color: rgb(120 113 108);
+            text-align: center;
+        }
+
+        .cta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2.5rem;
+            font-family: 'Switzer-Black', Arial, sans-serif;
+            color: var(--my-slate-600);
+        }
+
+        .cta a {
+            display: inline-block;
+            font-size: var(--my-space-19);
+            margin-right: var(--my-space-16);
+        }
+
+        @media only screen and (max-width:860px) {
+            .service-list {
+                width: 95%;
+            }
+            .service-title {
+                margin-top: 5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media only screen and (max-width:479px) {
+            .service-title {
+                font-size: 2.3rem;
+            }
+
+            .service-list li {
+                padding: 0.3rem 1.6rem;
+                border: 2px solid rgb(120 113 108);
+                border-radius: 50px;
+            }
+
+            .cta a {
+                display: inline-block;
+                font-size: var(--my-space-13);
+                margin-right: var(--my-space-16);
+            }
+        }
+
+    </style>
+
+    <article class="service-section">
+        <h1 class="switzer-xthin-italic service-title"> Our Service</h1>
+        <ul class="service-list">
+            <li> Outsourced Accounting Service </li>
+            <li> Tax Consultation &amp; Planning </li>
+            <li> Company Secretarial Service </li>
+            <li> Outsourced Payroll Service </li>
+            <li> Business Strategic Growth Consultation </li>
+            <li> Insurance Planning &amp; Policy Engagement </li>
+        </ul>
+        <div class="cta">
+            <a class="animate-line animate-line-black" href="services.html">Discover More</a>
+            <a class="animate-line animate-line-black" href="contacts.html">Contact Us</a>
+        </div>
+    </article>
+
+    <style>
+        .rolling-section {
+            display: flex;
+            height: 100vh;
+
+            background-image: url("assets/img-stock/banner-collab-hands.webp");
+            background-attachment: fixed;
+            background-size: cover;
+
+            color: var(--my-slate-200);
+            text-align: center;
+        }
+
+        .rolling-text {
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: var(--my-space-19);
+            backdrop-filter: blur(15px) brightness(0.8)
+        }
+
+        .banner-promote,
+        .banner-bottom {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .banner-promote {
+            width: 75%;
+            margin-bottom: var(--my-space-19);
+            font-size: var(--my-space-40);
+        }
+
+        .banner-bottom {
+            width: 75%;
+            font-size: var(--my-space-19);
+        }
+
+        #t1,
+        #t2,
+        #t3 {
+            width: 100%;
+        }
+
+        @media only screen and (max-width:860px) {
+            .banner-promote {
+                width: 100%;
+                font-size: var(--my-space-23);
+            }
+
+            .banner-bottom {
+                width: 100%;
+                font-size: var(--my-space-13);
+            }
+    </style>
+
+    <div class="rolling-section">
+        <div class="rolling-text">
+            <h3 class="banner-promote switzer-xthin-italic">
+                <div id="t1" class="flash"> Empowering Accounting Needs </div>
+                <div id="t2" class="flash" style="display:none"> Unlock Efficient Business Success Through
                     Outsourced Accounting </div>
-                <div id="t3" class="flash" style="width:100%; display:none"> Maximise Financial Management Through Our
+                <div id="t3" class="flash" style="display:none"> Maximise Financial Management Through Our
                     Tax Consultancy </div>
             </h3>
-            <p class="switzer-xthin center-x text-center text-2xl"
-                style="width:75%; font-size:2.0rem; padding-top:2rem">
+            <p class="banner-bottom switzer-xthin">
                 With years of experience, we have a
                 solid proven track record for delivering
                 exceptional outsourced accounting services.
             </p>
-            <script>
-            </script>
         </div>
     </div>
 
     <style>
-        .title {
-            color: var(--my-slate-500);
-            font-size: var(--my-space-30);
-        }
-
         .reason {
             display: flex;
             justify-content: space-around;
             align-items: center;
             column-gap: var(--my-space-30);
             padding: var(--my-space-40) var(--my-space-40);
-            /* this is footer related */
             margin-bottom: 20rem;
-
             background-color: var(--my-slate-200);
         }
 
@@ -168,7 +269,11 @@
         }
 
         @media only screen and (max-width:860px) {
-            .title {
+            .reason {
+                margin-bottom: 15rem;
+            }
+
+            .reason .title {
                 font-size: var(--my-space-23);
             }
 
@@ -186,6 +291,16 @@
 
             .reason-gallery {
                 display: none;
+            }
+
+            .reason-list li {
+                font-size: var(--my-space-13);
+            }
+        }
+
+        @media only screen and (max-width:479px) {
+            .reason {
+                margin-bottom: 9rem;
             }
         }
     </style>
@@ -283,12 +398,6 @@
         const splashLogo = document.getElementById("splash-logo");
 
         const footerFat = document.getElementById("footer-fat");
-        const service1 = document.getElementById("service1");
-        const service2 = document.getElementById("service2");
-        const service3 = document.getElementById("service3");
-        const service4 = document.getElementById("service4");
-        const service5 = document.getElementById("service5");
-        const service6 = document.getElementById("service6");
 
         // NOTE: navigation toggler
         const navRepositionAndHide = new IntersectionObserver(
