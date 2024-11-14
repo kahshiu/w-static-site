@@ -17,8 +17,8 @@
         }
 
         #header-fat {
-            min-height: 100dvh;
-            min-height: 100vh;
+            height: 100vh;
+            height: 100lvh;
             background-image: url("assets/svg/subtle-prism.svg");
             background-size: cover;
             background-attachment: fixed;
@@ -284,6 +284,7 @@
                 width: 100%;
                 font-size: var(--my-space-13);
             }
+        }
     </style>
 
     <div class="rolling-section">
@@ -359,6 +360,10 @@
         }
 
         @media only screen and (max-width:860px) {
+            .reason-list {
+                list-style-type: disc;
+            }
+
             .reason {
                 margin-bottom: 15rem;
             }
@@ -390,7 +395,7 @@
 
         @media only screen and (max-width:479px) {
             .reason {
-                margin-bottom: 9rem;
+                margin-bottom: 4.5rem;
             }
         }
     </style>
@@ -422,7 +427,16 @@
         </article>
     </section>
 
-    <footer>
+    <style>
+        #footer-fat {
+            display: none;
+        }
+
+        #footer-fat.show {
+            display: block;
+        }
+    </style>
+    <footer id="footer-fat">
         <div class="nav-bottom">
             <nav class="link-blocks">
                 <ul>
@@ -488,13 +502,14 @@
         const splashLogo = document.getElementById("splash-logo");
 
         const footerFat = document.getElementById("footer-fat");
+        const reasonHovers = document.getElementById("reason-hovers");
 
         // NOTE: navigation toggler
         const navRepositionAndHide = new IntersectionObserver(
             (entries) => {
                 const entry = entries[0];
                 const isReposition = !entry.isIntersecting;
-                console.log("recon", isReposition)
+                // console.log("recon", isReposition)
                 toggleClass(headerSlim, isReposition, "hide");
             },
             { threshold: 0 },
@@ -503,14 +518,24 @@
             (entries) => {
                 const entry = entries[0];
                 const isShow = !entry.isIntersecting;
-                console.log("showing", isShow)
+                // console.log("showing", isShow)
                 toggleClass(headerSlim, isShow, "reposition");
                 toggleClass(headerSlim, isShow, "show");
             },
             { threshold: 0 },
         )
+        const footerShow = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                const isShow = entry.isIntersecting;
+                console.log("showing", isShow)
+                toggleClass(footerFat, isShow, "show");
+            },
+            { threshold: 1 },
+        )
         navRepositionAndHide.observe(splashLogo);
         navShow.observe(headerFat);
+        footerShow.observe(reasonHovers);
 
         // SECTION: auto text rollers
         const tElems = [
