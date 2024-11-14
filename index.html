@@ -17,19 +17,22 @@
         }
 
         #header-fat {
-            height: 100vh;
+            min-height: 100dvh;
+            min-height: 100vh;
             background-image: url("assets/svg/subtle-prism.svg");
             background-size: cover;
             background-attachment: fixed;
+            color: var(--my-slate-200)
         }
 
         #header-slim.nav-top {
             background-color: transparent;
-            transition: opacity 0.3s;
+            justify-content: flex-end;
+            transition: opacity 0.5s;
         }
 
-        #header-slim .nav-top-left {
-            visibility: hidden;
+        #header-slim.nav-top .nav-top-left {
+            display: none;
         }
 
         #header-slim.reposition {
@@ -37,9 +40,14 @@
             top: 0px;
             left: 0px;
             z-index: 50;
+            justify-content: space-between;
             background-image: url("assets/svg/subtle-prism.svg");
             background-size: cover;
             background-attachment: fixed;
+        }
+
+        #header-slim.reposition .nav-top-left {
+            display: flex;
         }
 
         #header-slim.reposition .nav-top-left {
@@ -54,30 +62,58 @@
             opacity: 1;
         }
 
+        .splash {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 2rem;
+        }
 
         #splash-logo {
-            width: 24vw;
+            width: 25rem;
+            height: 25rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             filter: brightness(0) invert(1);
         }
 
         #splash-title {
             font-family: 'Switzer-Bold', Arial, sans-serif;
-            font-size: 3rem;
+            font-size: var(--my-space-30);
             font-weight: bold;
+            text-align: center;
             letter-spacing: 0.2em;
         }
 
-        @media only screen and (max-width:767px) {}
+        @media only screen and (max-width:768px) {
+            #splash-title {
+                font-size: var(--my-space-23);
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+            #splash-logo {
+                width: 20rem;
+                height: 20rem;
+            }
+
+            #splash-title {
+                width: 95%;
+                font-size: var(--my-space-16);
+            }
+        }
     </style>
 </head>
 
 <body class="font-sans">
-    <header id="header-fat" class="text-slate-200">
+    <header id="header-fat">
 
         <nav id="header-slim" class="nav-top">
             <div class="nav-top-left">
                 <div class="nav-top-logo" style="width:2.6rem; height:2.6rem;"></div>
-                <a class="nav-top-title switzer-black hvr-bounce-to-right" href="index.html">WAYMAKER</a>
+                <a class="nav-top-title switzer-black hvr-bounce-to-right" href="#">WAYMAKER</a>
             </div>
 
             <ul class="nav-top-right switzer-regular">
@@ -87,9 +123,9 @@
             </ul>
         </nav>
 
-        <section class="w-full" style="display:flex; flex-direction:column; align-items:center; height:100%; ">
-            <img id="splash-logo" src="assets/logo.png" style="margin-bottom:2rem" />
-            <a href="index.html" id="splash-title" class="text-center">WAYMAKER SERVICES <br /> SDN. BHD.</a>
+        <section class="splash">
+            <img id="splash-logo" src="assets/logo.png" />
+            <div id="splash-title">WAYMAKER SERVICES <br /> SDN. BHD.</div>
         </section>
     </header>
 
