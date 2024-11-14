@@ -3,58 +3,6 @@
 @import url(my-style-graphics.css);
 @import url(my-style-animations.css);
 
-
-/**************/
-#header-fat {
-    height: 100vh;
-    background-image: url("svg/subtle-prism.svg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#header-slim {
-    transition: opacity 0.3s;
-}
-
-#header-slim #header-logo {
-    opacity: 0;
-}
-
-#header-slim.reposition {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 50;
-    /* background-color: var(--my-blue); */
-    background-image: url("svg/subtle-prism.svg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#header-slim.reposition #header-logo {
-    opacity: 1;
-}
-
-#header-slim.hide {
-    opacity: 0;
-}
-
-#header-slim.show {
-    opacity: 1;
-}
-
-#splash-logo {
-    width: 24vw;
-    filter: brightness(0) invert(1);
-}
-
-#splash-title {
-    font-family: 'Switzer-Bold', Arial, sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 0.2em;
-}
-
 /***************/
 /** reusables **/
 /***************/

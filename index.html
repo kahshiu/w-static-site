@@ -10,16 +10,70 @@
         body {
             background-color: var(--my-slate-200);
         }
+
         .title {
             color: var(--my-slate-500);
             font-size: var(--my-space-30);
         }
+
+        #header-fat {
+            height: 100vh;
+            background-image: url("assets/svg/subtle-prism.svg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #header-slim.nav-top {
+            background-color: transparent;
+            transition: opacity 0.3s;
+        }
+
+        #header-slim .nav-top-left {
+            visibility: hidden;
+        }
+
+        #header-slim.reposition {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 50;
+            background-image: url("assets/svg/subtle-prism.svg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #header-slim.reposition .nav-top-left {
+            visibility: visible;
+        }
+
+        #header-slim.hide {
+            opacity: 0;
+        }
+
+        #header-slim.show {
+            opacity: 1;
+        }
+
+
+        #splash-logo {
+            width: 24vw;
+            filter: brightness(0) invert(1);
+        }
+
+        #splash-title {
+            font-family: 'Switzer-Bold', Arial, sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+        }
+
         @media only screen and (max-width:767px) {}
     </style>
 </head>
 
 <body class="font-sans">
-    <header id="header-fat" class="nav-top text-slate-200">
+    <header id="header-fat" class="text-slate-200">
+
         <nav id="header-slim" class="nav-top">
             <div class="nav-top-left">
                 <div class="nav-top-logo" style="width:2.6rem; height:2.6rem;"></div>
@@ -97,6 +151,7 @@
             .service-list {
                 width: 95%;
             }
+
             .service-title {
                 margin-top: 5rem;
                 margin-bottom: 2rem;
@@ -120,7 +175,6 @@
                 margin-right: var(--my-space-16);
             }
         }
-
     </style>
 
     <article class="service-section">
