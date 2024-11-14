@@ -73,6 +73,28 @@
             margin-bottom: var(--my-space-13);
         }
 
+        @media only screen and (max-width:1023px) {
+            .contacts {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            .location {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .location-details {
+                text-align: center;
+            }
+        }
+
         @media only screen and (max-width:479px) {
             .contact-details div {
                 display: flex;
@@ -117,27 +139,6 @@
             }
         }
 
-        @media only screen and (max-width:1023px) {
-            .contacts {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .title {
-                text-align: center;
-            }
-
-            .location {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .location-details {
-                text-align: center;
-            }
-        }
     </style>
 </head>
 
