@@ -228,21 +228,3 @@
     animation-duration: 1.5s;
     animation-iteration-count: 1;
 }
-
-#reason-list:hover {
-    cursor: pointer;
-}
-
-#reason-list li {
-    font-family: 'Switzer-regular', Arial, sans-serif;
-    font-size: 1.6rem;
-}
-
-#reason-list li .bg-img {
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-#reason-list li:hover .bg-img {
-    opacity: 1;
-}
