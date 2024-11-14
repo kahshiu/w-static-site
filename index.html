@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/my-style.css" />
+    <script src="assets/tailwindcss-3.4.14.js"></script>
+    <script src="assets/my-script.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link href="assets/my-style.css" rel="stylesheet" />
     <style>
         body {
             background-color: var(--my-slate-200);
@@ -17,8 +19,8 @@
         }
 
         #header-fat {
-            height: 100vh;
-            height: 100lvh;
+            min-height: 100vh;
+            min-height: 100svh;
             background-image: url("assets/svg/subtle-prism.svg");
             background-size: cover;
             background-attachment: fixed;
@@ -132,6 +134,7 @@
     <style>
         .service-section {
             min-height: 100vh;
+            min-height: 100svh;
             margin-left: auto;
             margin-right: auto;
             padding-top: 4rem;
@@ -233,11 +236,11 @@
         .rolling-section {
             display: flex;
             height: 100vh;
+            height: 100svh;
 
             background-image: url("assets/img-stock/banner-collab-hands.webp");
             background-attachment: fixed;
             background-size: cover;
-
             color: var(--my-slate-200);
             text-align: center;
         }
